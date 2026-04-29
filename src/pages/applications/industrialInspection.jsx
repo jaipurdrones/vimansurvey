@@ -1,0 +1,253 @@
+// src/pages/applications/IndustrialInspection.jsx
+import React, { useState } from "react";
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
+import { FaRegChartBar, FaChevronDown } from "react-icons/fa";
+
+import heroImg from "../../assets/industry1.jpg";
+import industry2 from "../../assets/industry2.jpg";
+import industry3 from "../../assets/industry3.jpg";
+import industry4 from "../../assets/industry4.jpg";
+import industry5 from "../../assets/industry5.jpg";
+
+export default function IndustrialInspection() {
+  const [openIndex, setOpenIndex] = useState(null);
+
+  const faqs = [
+    {
+      q: "What is Industrial Drone Inspection?",
+      a: "Industrial Drone Inspection uses UAVs to capture high-resolution imagery, thermal data, and LiDAR scans of industrial assets, enabling proactive maintenance and enhanced safety.",
+    },
+    {
+      q: "How does drone technology improve industrial inspections?",
+      a: "Drones reduce human risk, provide accurate and repeatable measurements, and allow inspections in hard-to-reach or hazardous locations without disrupting operations.",
+    },
+    {
+      q: "Which industries can benefit from drone inspections?",
+      a: "Manufacturing plants, refineries, power stations, warehouses, and large-scale infrastructure projects all benefit from faster, safer, and more data-driven inspections.",
+    },
+    {
+      q: "Can drones detect early-stage faults or hazards?",
+      a: "Yes, with thermal, visual, and LiDAR data, drones detect overheating components, corrosion, structural cracks, and other anomalies long before they become critical issues.",
+    },
+  ];
+
+  return (
+    <main className="bg-white text-gray-800">
+      <Helmet>
+        <title>Industrial Inspection & Drone Survey — Viman Survey</title>
+        <meta
+          name="description"
+          content="Viman Survey offers advanced drone-based industrial inspections — capturing visual, thermal, and LiDAR data for predictive maintenance, asset monitoring, and operational safety."
+        />
+      </Helmet>
+
+      {/* Hero Section */}
+      <section className="relative flex items-center justify-center text-center text-white overflow-hidden min-h-[65vh] md:min-h-[85vh] lg:min-h-[95vh]">
+        <img
+          src={heroImg}
+          alt="Industrial Drone Inspection"
+          className="absolute inset-0 w-full h-full object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70" />
+        <div className="relative z-10 px-6 max-w-4xl">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-3 drop-shadow-lg">
+            Industrial Drone Inspection & Survey
+          </h1>
+          <p className="text-sm sm:text-base md:text-lg text-gray-200 max-w-2xl mx-auto drop-shadow">
+            Harnessing advanced drone technology to ensure safer, smarter, and more efficient industrial operations.
+          </p>
+        </div>
+      </section>
+
+      {/* Overview Section */}
+      <section className="max-w-6xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-10 items-center">
+        <div>
+          <h2 className="text-3xl font-semibold text-primary-700 mb-4">
+            Revolutionizing Industrial Inspections with Drones
+          </h2>
+          <p className="text-gray-700 leading-relaxed mb-4 text-lg">
+            <strong>Viman Survey</strong> provides comprehensive drone inspection solutions for factories, refineries, power plants, and industrial infrastructure.  
+            Our UAVs deliver high-resolution imagery, thermal scans, and LiDAR data to identify early-stage faults, monitor structural integrity, and ensure operational safety.
+          </p>
+          <p className="text-gray-700 leading-relaxed text-lg">
+            By combining autonomous flight missions with AI-powered analytics, we empower industrial teams with actionable insights for predictive maintenance and reduced downtime.
+          </p>
+        </div>
+
+        <div className="w-full flex justify-center">
+          <img
+            src={industry2}
+            alt="Industrial Inspection Overview"
+            className="rounded-2xl shadow-xl w-full max-w-5xl object-cover h-[320px] sm:h-[380px] md:h-[440px]"
+          />
+        </div>
+      </section>
+
+      {/* Sections */}
+      <div className="max-w-6xl mx-auto px-6 py-20 space-y-24">
+
+        {/* Section 1 */}
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 className="text-3xl font-semibold text-primary-700 mb-4">
+              Thermal & Infrared Imaging
+            </h2>
+            <p className="text-gray-700 leading-relaxed mb-4 text-lg">
+              Detect overheating components, energy losses, and electrical faults with high-resolution thermal scans.
+            </p>
+            <p className="text-gray-700 leading-relaxed text-lg">
+              Early detection helps prevent equipment failure, reduce downtime, and optimize operational efficiency.
+            </p>
+          </div>
+          <div className="flex justify-center">
+            <img
+              src={industry3}
+              alt="Thermal Inspection Drone"
+              className="rounded-xl shadow-lg w-full md:w-4/5 object-cover max-h-[360px]"
+            />
+          </div>
+        </div>
+
+        {/* Section 2 */}
+        <div className="grid md:grid-cols-2 gap-12 items-center md:flex-row-reverse">
+          <div className="order-2 md:order-1 flex justify-center">
+            <img
+              src={industry4}
+              alt="Structural Inspection Drone"
+              className="rounded-xl shadow-lg w-full md:w-4/5 object-cover max-h-[360px]"
+            />
+          </div>
+          <div className="order-1 md:order-2">
+            <h2 className="text-3xl font-semibold text-primary-700 mb-4">
+              Structural Condition Monitoring
+            </h2>
+            <p className="text-gray-700 leading-relaxed mb-4 text-lg">
+              Inspect towers, tanks, pipelines, and industrial structures safely and accurately using drones equipped with high-resolution cameras and 3D mapping tools.
+            </p>
+            <p className="text-gray-700 leading-relaxed text-lg">
+              Continuous monitoring enables proactive maintenance and ensures compliance with safety regulations.
+            </p>
+          </div>
+        </div>
+
+        {/* Section 3 */}
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 className="text-3xl font-semibold text-primary-700 mb-4">
+              Real-Time Reporting & Analytics
+            </h2>
+            <p className="text-gray-700 leading-relaxed mb-4 text-lg">
+              Generate live inspection reports, 3D models, and actionable dashboards to support predictive maintenance strategies.
+            </p>
+            <p className="text-gray-700 leading-relaxed text-lg">
+              Access timely insights to make informed operational decisions and prevent costly downtime.
+            </p>
+          </div>
+          <div className="flex justify-center">
+            <img
+              src={industry5}
+              alt="Drone Data Reporting"
+              className="rounded-xl shadow-lg w-full md:w-4/5 object-cover max-h-[360px]"
+            />
+          </div>
+        </div>
+
+      </div>
+
+      
+      {/* Key Applications Section */}
+      <div className="bg-gray-50 py-20 px-6">
+        <div className="max-w-6xl mx-auto text-center">
+          <h3 className="text-3xl font-semibold text-primary-700 mb-10">
+            Core Applications of Industrial Drone Inspections
+          </h3>
+          <div className="grid md:grid-cols-3 gap-10">
+            {[
+              { title: "Predictive Maintenance", desc: "Proactively detect faults before they escalate." },
+              { title: "Safety & Risk Reduction", desc: "Keep personnel out of hazardous zones." },
+              { title: "Data-Driven Decisions", desc: "Leverage accurate visual, thermal, and LiDAR insights." },
+            ].map((item, i) => (
+              <div key={i} className="p-6 bg-white rounded-lg shadow-sm border border-gray-200 hover:shadow-md transition">
+                <h4 className="text-xl font-semibold text-primary-700 mb-3">{item.title}</h4>
+                <p className="text-gray-700 text-sm leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Benefits Section */}
+      <section className="bg-primary-700 text-white py-20 px-6 text-center">
+        <div className="max-w-6xl mx-auto">
+          <h3 className="text-3xl font-semibold mb-6">Benefits of Drone-Based Industrial Inspections</h3>
+          <p className="text-gray-200 mb-10 max-w-3xl mx-auto">
+            Improve operational safety, reduce downtime, increase efficiency, and access precise insights into your industrial assets.
+          </p>
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              { title: "Enhanced Safety", desc: "Keep personnel away from hazardous inspections." },
+              { title: "High Accuracy", desc: "Visual, thermal, and LiDAR data ensures reliable insights." },
+              { title: "Cost & Time Efficiency", desc: "Faster inspections reduce downtime and maintenance costs." },
+            ].map((b, i) => (
+              <div key={i} className="p-6 bg-white/10 rounded-lg border border-white/20 hover:bg-white/20 transition">
+                <h4 className="text-xl font-semibold text-white mb-3">{b.title}</h4>
+                <p className="text-white/90 text-sm">{b.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      {/* FAQ */}
+      <section className="max-w-6xl mx-auto px-6 py-12 sm:py-16">
+        <h3 className="text-3xl font-semibold text-center text-primary-700 mb-8">
+          Frequently Asked Questions
+        </h3>
+
+        <div className="space-y-3">
+          {faqs.map((f, idx) => {
+            const isOpen = openIndex === idx;
+            return (
+              <div key={idx} className="border border-gray-200 rounded-lg overflow-hidden">
+                <button
+                  onClick={() => setOpenIndex(isOpen ? null : idx)}
+                  className="w-full flex items-center justify-between px-4 py-3 text-left bg-white hover:bg-gray-50 transition"
+                >
+                  <div className="flex items-center gap-3">
+                    <FaRegChartBar className="text-primary-600" />
+                    <span className="font-medium text-gray-800">{f.q}</span>
+                  </div>
+                  <FaChevronDown className={`transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`} />
+                </button>
+
+                {isOpen && (
+                  <div className="px-4 pb-4 bg-white text-gray-700">
+                    <p className="pt-2 leading-relaxed">{f.a}</p>
+                  </div>
+                )}
+              </div>
+            );
+          })}
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="bg-primary-700 text-white py-16 text-center">
+        <div className="max-w-6xl mx-auto px-6">
+          <h3 className="text-3xl font-semibold mb-4">
+            Partner with India’s Industrial Drone Experts
+          </h3>
+          <p className="text-gray-200 max-w-2xl mx-auto mb-6">
+            Leverage Viman Survey’s drone inspection solutions to optimize maintenance, reduce risks, and improve operational efficiency.
+          </p>
+          <Link
+            to="/contact"
+            className="inline-block bg-white text-primary-700 px-8 py-3 rounded-full font-medium hover:bg-gray-100 transition"
+          >
+            Get in Touch
+          </Link>
+        </div>
+      </section>
+    </main>
+  );
+}
