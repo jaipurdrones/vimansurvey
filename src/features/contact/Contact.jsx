@@ -1,6 +1,5 @@
 import React from "react";
-import ContactForm from "../components/ContactForm";
-
+import ContactForm from "./ContactForm";
 export default function Contact() {
   return (
     <section className="max-w-6xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-8">

@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { motion, AnimatePresence } from "framer-motion";
 
-// ✅ Updated images
-import hero1 from "../assets/home1.jpeg";
-import hero2 from "../assets/home1.jpg";
-import hero3 from "../assets/home2.jpg";
+// ✅ Corrected asset paths
+import hero1 from "../../assets/home1.jpeg";
+import hero2 from "../../assets/home1.jpg";
+import hero3 from "../../assets/home2.jpg";
 
 export default function Hero({
   title = "India’s Leading Drone Survey Company",
@@ -20,8 +20,9 @@ export default function Hero({
     const interval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % images.length);
     }, 5000);
+
     return () => clearInterval(interval);
-  }, []);
+  }, [images.length]);
 
   return (
     <section className="relative h-[60vh] sm:h-[75vh] md:h-[90vh] text-white overflow-hidden">
@@ -29,7 +30,7 @@ export default function Hero({
         <title>{title} — Viman Survey</title>
       </Helmet>
 
-      {/* ✅ Background Slider */}
+      {/* Background Slider */}
       <div className="absolute inset-0">
         <AnimatePresence>
           <motion.img
@@ -48,7 +49,7 @@ export default function Hero({
         <div className="absolute inset-0 bg-black/60" />
       </div>
 
-      {/* ✅ Content */}
+      {/* Content */}
       <div className="relative z-10 flex flex-col justify-center items-center text-center h-full px-6">
         <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold mb-4 leading-tight">
           {title}
@@ -75,16 +76,14 @@ export default function Hero({
         </div>
       </div>
 
-      {/* ✅ Indicators */}
+      {/* Indicators */}
       <div className="absolute bottom-5 flex gap-2 justify-center w-full z-10">
         {images.map((_, i) => (
           <button
             key={i}
             onClick={() => setCurrent(i)}
             className={`h-2 rounded-full transition-all ${
-              i === current
-                ? "w-6 bg-primary"
-                : "w-2 bg-gray-300/50"
+              i === current ? "w-6 bg-primary" : "w-2 bg-gray-300/50"
             }`}
           />
         ))}

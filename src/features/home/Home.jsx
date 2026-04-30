@@ -1,26 +1,26 @@
 import React from "react";
-import Hero from "../components/Hero";
-import Services from "../components/Services";
-import WhyChooseUs from "../components/WhyChooseUs";
+import Hero from "./Hero";
+import Services from "../services/Services";
+import WhyChooseUs from "./WhyChooseUs";
+import AboutIntro from "./AboutIntro";
 import { Link } from "react-router-dom";
-import AboutIntro from "../components/AboutIntro";
 
-// ✅ Icons
-import miningIcon from "../assets/icons/mining.svg";
-import constructionIcon from "../assets/icons/construction.svg";
-import solarIcon from "../assets/icons/solar.svg";
-import agricultureIcon from "../assets/icons/agriculture.svg";
-import smartCityIcon from "../assets/icons/smartcity.svg";
-import industrialIcon from "../assets/icons/industrial.svg";
+// Icons (correct path)
+import miningIcon from "../../assets/icons/mining.svg";
+import constructionIcon from "../../assets/icons/construction.svg";
+import solarIcon from "../../assets/icons/solar.svg";
+import agricultureIcon from "../../assets/icons/agriculture.svg";
+import smartCityIcon from "../../assets/icons/smartcity.svg";
+import industrialIcon from "../../assets/icons/industrial.svg";
 
 export default function Home() {
   return (
     <div className="bg-gradient-to-b from-gray-50 to-gray-200 text-gray-900">
 
-      {/* ✅ HERO */}
+      {/* HERO */}
       <Hero />
 
-      {/* ✅ SERVICES */}
+      {/* SERVICES */}
       <div className="px-4 sm:px-6 md:px-0">
         <Services
           items={[
@@ -62,7 +62,7 @@ export default function Home() {
               title: "Smart City Survey",
               description:
                 "Urban mapping and GIS data collection for infrastructure.",
-              link: "/applications/smartcitysurvey",
+              link: "/applications/smartcitySurvey",
             },
             {
               id: 6,
@@ -76,17 +76,17 @@ export default function Home() {
         />
       </div>
 
-      {/* ✅ ABOUT */}
+      {/* ABOUT */}
       <div className="-mt-10">
         <AboutIntro />
       </div>
 
-      {/* ✅ WHY CHOOSE US */}
+      {/* WHY CHOOSE US */}
       <div className="-mt-12">
         <WhyChooseUs />
       </div>
 
-      {/* ✅ CTA */}
+      {/* CTA */}
       <section className="text-center py-16 bg-gradient-to-r from-primary-500 to-primary-600 text-white">
         <h2 className="text-3xl font-bold mb-4">
           Let’s Talk About Your Project

@@ -1,9 +1,10 @@
 import React from "react";
 
-import precisionImg from "../assets/icons/precision.svg";
-import speedImg from "../assets/icons/speed.svg";
-import costImg from "../assets/icons/cost.svg";
-import teamImg from "../assets/icons/team.svg";
+// ✅ FIXED paths (IMPORTANT)
+import precisionImg from "../../assets/icons/precision.svg";
+import speedImg from "../../assets/icons/speed.svg";
+import costImg from "../../assets/icons/cost.svg";
+import teamImg from "../../assets/icons/team.svg";
 
 export default function WhyChooseUs() {
   const points = [

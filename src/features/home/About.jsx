@@ -1,9 +1,11 @@
 import React from "react";
-import aboutImg from "../assets/about.jpg";
-import rocketIcon from "../assets/Rocket.svg";
-import timeIcon from "../assets/icons/time.svg";
-import dataIcon from "../assets/icons/data.svg";
-import mapIcon from "../assets/icons/map.svg";
+
+// ✅ FIXED asset paths (IMPORTANT)
+import aboutImg from "../../assets/about.jpg";
+import rocketIcon from "../../assets/Rocket.svg";
+import timeIcon from "../../assets/icons/time.svg";
+import dataIcon from "../../assets/icons/data.svg";
+import mapIcon from "../../assets/icons/map.svg";
 
 export default function About() {
   return (
