@@ -3,11 +3,11 @@ import React from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import heroBg from "../../assets/Home/home1.webp"; // ✅ Replace with your preferred hero image
+import heroBg from "../../../assets/Home/home1.webp";
 
 export default function PilotsOnProject() {
   return (
-    <section className="bg-white text-gray-800 pt-24 overflow-hidden">
+    <main className="bg-white text-gray-800">
       <Helmet>
         <title>Pilots on Project — Viman Survey</title>
         <meta
@@ -16,31 +16,38 @@ export default function PilotsOnProject() {
         />
       </Helmet>
 
-      {/* Hero Section */}
-      <div className="relative h-[70vh] flex flex-col justify-center items-center text-center text-white">
+      {/* Hero Section (MATCHED) */}
+      <section className="relative flex items-center justify-center text-center text-white overflow-hidden min-h-[65vh] md:min-h-[85vh] lg:min-h-[95vh]">
         <img
           src={heroBg}
           alt="Drone Pilots on Project"
-          className="absolute inset-0 w-full h-full object-cover brightness-70"
+          className="absolute inset-0 w-full h-full object-cover object-center"
         />
+
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70" />
+
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="relative z-10 px-6 max-w-3xl"
+          className="relative z-10 px-6 max-w-4xl"
         >
-          <h1 className="text-4xl md:text-6xl font-bold mb-4 drop-shadow-md">
-            Certified Drone Pilots on Your Project
+          <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
+            Certified Drone Pilots
           </h1>
-          <p className="text-lg md:text-xl text-gray-200 leading-relaxed">
+          <h2 className="text-3xl md:text-5xl font-semibold mt-2 text-primary-300">
+            On Your Project
+          </h2>
+          <p className="mt-6 text-base md:text-lg max-w-2xl mx-auto text-gray-200">
             Embed experienced, certified aerial operators into your team — for
             safe, precise, and efficient drone-data missions.
           </p>
         </motion.div>
-      </div>
+      </section>
 
       {/* Overview Section */}
-      <div className="max-w-6xl mx-auto px-6 py-20 space-y-8">
+      <section className="max-w-6xl mx-auto px-6 py-20 space-y-8">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -61,8 +68,8 @@ export default function PilotsOnProject() {
           <p className="text-gray-700 leading-relaxed">
             From pre-flight planning and regulatory clearances to mission
             execution and data hand-off, our pilots integrate seamlessly with
-            your team and timeline. You get <strong>quality, speed and safety</strong> —
-            all under one roof.
+            your team and timeline. You get{" "}
+            <strong>quality, speed and safety</strong> — all under one roof.
           </p>
         </motion.div>
 
@@ -84,17 +91,17 @@ export default function PilotsOnProject() {
           ].map((point, i) => (
             <li
               key={i}
-              className="flex items-start space-x-3 bg-gray-50 p-5 rounded-xl shadow-sm hover:shadow-md transition"
+              className="flex items-start space-x-3 bg-gray-50 p-5 rounded-xl shadow hover:shadow-md transition"
             >
               <span className="text-primary-600 text-lg">✔</span>
               <span className="text-gray-700">{point}</span>
             </li>
           ))}
         </motion.ul>
-      </div>
+      </section>
 
       {/* Highlight Banner */}
-      <div className="bg-gray-50 py-12">
+      <section className="bg-gray-50 py-12">
         <div className="max-w-6xl mx-auto text-center px-6">
           <motion.h3
             initial={{ opacity: 0, y: 20 }}
@@ -110,10 +117,10 @@ export default function PilotsOnProject() {
             results-driven.
           </p>
         </div>
-      </div>
+      </section>
 
       {/* CTA Section */}
-      <div className="bg-primary-700 text-white py-20 px-6 text-center">
+      <section className="bg-primary-700 text-white py-20 px-6 text-center">
         <motion.h3
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -133,7 +140,7 @@ export default function PilotsOnProject() {
         >
           Get in Touch
         </Link>
-      </div>
-    </section>
+      </section>
+    </main>
   );
 }

@@ -34,8 +34,8 @@ import LidarSurvey from "../features/services/lidarSurvey";
 import DroneMagneticSurvey from "../features/services/droneMagneticSurvey";
 
 // Solutions
-import DroneDataProcessing from "../features/services/drone-insight-system";
-import PilotsOnProject from "../features/services/pilot";
+import DroneDataProcessing from "../features/services/Solutions/drone-insight-system";
+import PilotsOnProject from "../features/services/Solutions/pilot";
 
 export default function App() {
   return (

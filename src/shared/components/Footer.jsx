@@ -35,8 +35,8 @@ export default function Footer() {
   const quickLinks = [
     { name: "Home", to: "/" },
     { name: "About Us", to: "/about" },
-    { name: "Drone Data Process", to: "/drone-data" },
-    { name: "Fly With Us", to: "/fly-with-us" },
+    { name: "Drone Data Process", to: "/Solutions/drone-insight-system" },
+    { name: "Fly With Us", to: "/Solutions/pilot" },
     { name: "Contact Us", to: "/contact" },
     { name: "Privacy Policy", to: "/privacy" },
   ];
@@ -60,7 +60,7 @@ export default function Footer() {
             <SocialIcon Icon={FaInstagram} link="https://instagram.com/vimansurvey" label="Instagram" />
             <SocialIcon Icon={FaTwitter} link="https://twitter.com/vimansurvey" label="Twitter" />
             <SocialIcon Icon={FaLinkedinIn} link="https://linkedin.com/company/vimansurvey" label="LinkedIn" />
-            <SocialIcon Icon={FaWhatsapp} link="https://wa.me/919999999999" label="WhatsApp" />
+            <SocialIcon Icon={FaWhatsapp} link="https://wa.me/919352230994" label="WhatsApp" />
             <SocialIcon Icon={FaYoutube} link="https://youtube.com/@vimansurvey" label="YouTube" />
           </div>
         </div>
@@ -86,7 +86,9 @@ export default function Footer() {
         <div className="md:col-span-2">
           <h3 className="text-lg font-semibold text-cyan-600 mb-2 sm:mb-1">Applications</h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-1 text-[15px] sm:text-[14px] font-medium">
-            {[...applicationLinks1, ...applicationLinks2].map((item, index) => (
+            {[...applicationLinks1, ...applicationLinks2]
+              .sort((a, b) => a.name.localeCompare(b.name))
+              .map((item, index) => (
               <Link
                 key={index}
                 to={item.to}

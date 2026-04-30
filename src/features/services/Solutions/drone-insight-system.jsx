@@ -2,7 +2,7 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import heroBg from "../../assets/M350-RTK-4.webp";
+import heroBg from "../../../assets/M350-RTK-4.webp";
 
 export default function DroneDataProcess() {
   return (
