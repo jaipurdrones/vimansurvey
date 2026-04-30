@@ -3,7 +3,7 @@ import React from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import heroBg from "../../assets/background1.jpg"; // ✅ Replace with your preferred hero image
+import heroBg from "../../assets/Home/home1.webp"; // ✅ Replace with your preferred hero image
 
 export default function PilotsOnProject() {
   return (

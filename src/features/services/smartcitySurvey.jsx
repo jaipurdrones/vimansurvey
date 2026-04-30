@@ -4,11 +4,11 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { FaRegChartBar, FaChevronDown } from "react-icons/fa";
 
-import heroImg from "../../assets/smart1.png";
-import img2 from "../../assets/smart2.jpg";
-import img3 from "../../assets/smart3.jpg";
-import img4 from "../../assets/smart4.jpg";
-import img5 from "../../assets/smart5.jpg";
+import heroImg from "../../assets/Smart/smart1.webp";
+import img2 from "../../assets/Smart/smart2.webp";
+import img3 from "../../assets/Smart/smart3.webp";
+import img4 from "../../assets/Smart/smart4.webp";
+import img5 from "../../assets/Smart/smart5.webp";
 
 export default function SmartCitySurvey() {
   const [openIndex, setOpenIndex] = useState(null);

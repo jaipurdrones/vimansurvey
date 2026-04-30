@@ -10,11 +10,11 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/effect-fade";
 
-import heroImg from "../../assets/bridge5.png";
-import bridge1 from "../../assets/bridge1.png";
-import bridge2 from "../../assets/bridge2.png";
-import bridge3 from "../../assets/bridge3.png";
-import bridge4 from "../../assets/bridge4.png";
+import heroImg from "../../assets/Bridge/bridge5.webp";
+import bridge1 from "../../assets/Bridge/bridge1.webp";
+import bridge2 from "../../assets/Bridge/bridge2.webp";
+import bridge3 from "../../assets/Bridge/bridge3.webp";
+import bridge4 from "../../assets/Bridge/bridge4.webp";
 
 export default function BridgeRoadInspection() {
   const [openIndex, setOpenIndex] = useState(null);

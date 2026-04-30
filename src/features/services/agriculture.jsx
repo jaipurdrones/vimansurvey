@@ -10,12 +10,12 @@ import {
   FaTractor,
 } from "react-icons/fa";
 
-import heroImg from "../../assets/Agri.png";
-import agri1 from "../../assets/agriculture1.jpg";
-import agri2 from "../../assets/agriculture2.jpg";
-import agri3 from "../../assets/agriculture3.jpg";
-import agri4 from "../../assets/agriculture5.jpg";
-import agri5 from "../../assets/agriculture4.jpg";
+import heroImg from "../../assets/Agriculture/Agri.webp";
+import agri1 from "../../assets/Agriculture/agriculture1.webp";
+import agri2 from "../../assets/Agriculture/agriculture2.webp";
+import agri3 from "../../assets/Agriculture/agriculture3.webp";
+import agri4 from "../../assets/Agriculture/agriculture5.webp";
+import agri5 from "../../assets/Agriculture/agriculture4.webp";
 
 export default function AgricultureSurvey() {
   const [openIndex, setOpenIndex] = useState(null);

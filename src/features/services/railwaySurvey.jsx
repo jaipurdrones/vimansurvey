@@ -4,11 +4,11 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { FaRegChartBar, FaChevronDown } from "react-icons/fa";
 
-import heroImg from "../../assets/railway1.png";
-import railway2 from "../../assets/railway2.jpg";
-import railway3 from "../../assets/railway3.jpg";
-import railway4 from "../../assets/railway4.jpg";
-import railway5 from "../../assets/railway5.jpg";
+import heroImg from "../../assets/Railway/railway1.webp";
+import railway2 from "../../assets/Railway/railway2.webp";
+import railway3 from "../../assets/Railway/railway3.webp";
+import railway4 from "../../assets/Railway/railway4.webp";
+import railway5 from "../../assets/Railway/railway5.webp";
 
 export default function RailwaySurvey() {
   const [openIndex, setOpenIndex] = useState(null);

@@ -2,8 +2,8 @@ import React from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import miningImg from "../../assets/mining.jpg";
-import mining1 from "../../assets/mining1.png";
+import miningImg from "../../assets/Mining/mining.webp";
+import mining1 from "../../assets/Mining/mining1.webp";
 
 
 export default function MiningSurvey() {

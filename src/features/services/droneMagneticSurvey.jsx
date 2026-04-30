@@ -5,10 +5,10 @@ import { Link } from "react-router-dom";
 import { FaRegChartBar, FaChevronDown } from "react-icons/fa";
 
 // ✅ Import images
-import dm1 from "../../assets/DM1.jpg";
-import dm2 from "../../assets/DM2.jpg";
-import dm3 from "../../assets/DM3.avif";
-import dm4 from "../../assets/DM4.png";
+import dm1 from "../../assets/Dronemag/DM1.webp";
+import dm2 from "../../assets/Dronemag/DM2.webp";
+import dm3 from "../../assets/Dronemag/DM3.webp";
+import dm4 from "../../assets/Dronemag/DM4.webp";
 
 export default function DroneMagneticSurvey() {
   const [openIndex, setOpenIndex] = useState(null);

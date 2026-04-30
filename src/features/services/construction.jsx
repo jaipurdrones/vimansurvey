@@ -2,9 +2,9 @@ import React from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
-import heroImg from "../../assets/construction1.png";
-import construction2 from "../../assets/construction2.png";
-import construction3 from "../../assets/construction3.png";
+import heroImg from "../../assets/Construction/construction1.webp";
+import construction2 from "../../assets/Construction/construction2.webp";
+import construction3 from "../../assets/Construction/construction3.webp";
 
 const ConstructionSurvey = () => {
   return (

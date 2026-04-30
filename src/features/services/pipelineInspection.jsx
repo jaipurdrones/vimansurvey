@@ -4,11 +4,11 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { FaRegChartBar, FaChevronDown } from "react-icons/fa";
 
-import pipelineHero from "../../assets/pipeline1.jpg";
-import img2 from "../../assets/pipeline2.jpg";
-import img3 from "../../assets/pipeline3.jpg";
-import img4 from "../../assets/pipeline4.jpg";
-import img5 from "../../assets/pipeline5.jpg";
+import pipelineHero from "../../assets/Pipeline/pipeline.webp";
+import img2 from "../../assets/Pipeline/pipeline1.webp";
+import img3 from "../../assets/Pipeline/pipeline2.webp";
+import img4 from "../../assets/Pipeline/pipeline3.webp";
+import img5 from "../../assets/Pipeline/pipeline4.webp";
 
 export default function PipelineInspection() {
   const [openIndex, setOpenIndex] = useState(null);

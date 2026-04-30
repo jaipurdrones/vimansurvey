@@ -4,11 +4,11 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { FaRegChartBar, FaChevronDown } from "react-icons/fa";
 
-import river1 from "../../assets/river1.jpg";
-import river2 from "../../assets/river2.jpg";
-import river3 from "../../assets/river3.jpg";
-import river4 from "../../assets/river4.jpg";
-import river5 from "../../assets/river5.jpg";
+import river1 from "../../assets/River/river1.webp";
+import river2 from "../../assets/River/river2.webp";
+import river3 from "../../assets/River/river3.webp";
+import river4 from "../../assets/River/river4.webp";
+import river5 from "../../assets/River/river5.webp";
 
 export default function RiverMappingAndServices() {
   const [openIndex, setOpenIndex] = useState(null);

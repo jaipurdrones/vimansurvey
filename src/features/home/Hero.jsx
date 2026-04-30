@@ -4,9 +4,9 @@ import { Helmet } from "react-helmet-async";
 import { motion, AnimatePresence } from "framer-motion";
 
 // ✅ Corrected asset paths
-import hero1 from "../../assets/home1.jpeg";
-import hero2 from "../../assets/home1.jpg";
-import hero3 from "../../assets/home2.jpg";
+import hero1 from "../../assets/Home/home1.webp";
+import hero2 from "../../assets/Home/home3.webp";
+import hero3 from "../../assets/Home/home2.webp";
 
 export default function Hero({
   title = "India’s Leading Drone Survey Company",

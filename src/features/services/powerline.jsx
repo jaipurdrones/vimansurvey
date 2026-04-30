@@ -10,11 +10,11 @@ import {
   FaChevronDown,
 } from "react-icons/fa";
 
-import heroImg from "../../assets/power1.png";
-import power2 from "../../assets/power2.jpg";
-import power3 from "../../assets/power3.jpg";
-import power4 from "../../assets/power4.jpg";
-import power1 from "../../assets/power5.jpg";
+import heroImg from "../../assets/Power/power1.webp";
+import power2 from "../../assets/Power/power2.webp";
+import power3 from "../../assets/Power/power3.webp";
+import power4 from "../../assets/Power/power4.webp";
+import power5 from "../../assets/Power/power5.webp";
 
 
 export default function PowerlineMonitoring() {
@@ -175,7 +175,7 @@ export default function PowerlineMonitoring() {
           </div>
           <div className="flex justify-center">
             <img
-              src={power1}
+              src={power5}
               alt="Tower Structure Inspection"
               className="rounded-xl shadow-lg w-full md:w-4/5 object-cover max-h-[360px]"
             />

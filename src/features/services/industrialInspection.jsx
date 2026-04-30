@@ -4,11 +4,11 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { FaRegChartBar, FaChevronDown } from "react-icons/fa";
 
-import heroImg from "../../assets/industry1.jpg";
-import industry2 from "../../assets/industry2.jpg";
-import industry3 from "../../assets/industry3.jpg";
-import industry4 from "../../assets/industry4.jpg";
-import industry5 from "../../assets/industry5.jpg";
+import heroImg from "../../assets/Industry/industry1.webp";
+import industry2 from "../../assets/Industry/industry2.webp";
+import industry3 from "../../assets/Industry/industry3.webp";
+import industry4 from "../../assets/Industry/industry4.webp";
+import industry5 from "../../assets/Industry/industry5.webp";
 
 export default function IndustrialInspection() {
   const [openIndex, setOpenIndex] = useState(null);

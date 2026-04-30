@@ -1,8 +1,8 @@
 import React from "react";
 
 // ✅ FIXED asset paths (IMPORTANT)
-import aboutImg from "../../assets/about.jpg";
-import rocketIcon from "../../assets/Rocket.svg";
+import aboutImg from "../../assets/About/about.webp";
+import rocketIcon from "../../assets/icons/Rocket.svg";
 import timeIcon from "../../assets/icons/time.svg";
 import dataIcon from "../../assets/icons/data.svg";
 import mapIcon from "../../assets/icons/map.svg";

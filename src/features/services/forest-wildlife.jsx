@@ -4,11 +4,11 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { FaRegChartBar, FaChevronDown } from "react-icons/fa";
 
-import forest1 from "../../assets/forest1.png";
-import forest2 from "../../assets/forest2.jpg";
-import forest3 from "../../assets/forest3.jpg";
-import forest4 from "../../assets/forest4.jpg";
-import forest5 from "../../assets/forest5.jpg";
+import forest1 from "../../assets/Forest/forest1.webp";
+import forest2 from "../../assets/Forest/forest2.webp";
+import forest3 from "../../assets/Forest/forest3.webp";
+import forest4 from "../../assets/Forest/forest4.webp";
+import forest5 from "../../assets/Forest/forest5.webp";
 
 export default function ForestWildlifeSurvey() {
   const [openIndex, setOpenIndex] = useState(null);

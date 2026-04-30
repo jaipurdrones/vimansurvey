@@ -2,8 +2,8 @@ import React from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import surveyImg from "../../assets/minor-mineral-banner.jpg";
-import minormineral1 from "../../assets/minormineral1.png"
+import surveyImg from "../../assets/Minormineral/minor-mineral-banner.webp";
+import minormineral1 from "../../assets/Minormineral/minormineral1.webp"
 
 export default function MinorMineralSurvey() {
   return (

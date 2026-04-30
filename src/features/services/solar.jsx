@@ -7,10 +7,10 @@ import {
   FaChevronDown,
   FaTools,
 } from "react-icons/fa";
-import solarHero from "../../assets/solar1.png";
-import solar2 from "../../assets/solar2.jpg";
-import solar3 from "../../assets/solar3.jpg";
-import solar4 from "../../assets/solar4.jpg";
+import solarHero from "../../assets/Solar/solar1.webp";
+import solar2 from "../../assets/Solar/solar2.webp";
+import solar3 from "../../assets/Solar/solar3.webp";
+import solar4 from "../../assets/Solar/solar4.webp";
 
 export default function SolarSurvey() {
   const [openIndex, setOpenIndex] = useState(null);

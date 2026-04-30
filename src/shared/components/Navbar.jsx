@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
-import logo from "../../assets/Viman_survey.svg";
+import logo from "../../assets/icons/Viman_survey.svg";
 
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = React.useState(false);

@@ -5,10 +5,11 @@ import { Link } from "react-router-dom";
 import { FaRegChartBar, FaChevronDown } from "react-icons/fa";
 
 // ✅ Import images correctly
-import lidarHero from "../../assets/lidar1.webp";
-import lidar2 from "../../assets/lidar2.gif";
-import lidar3 from "../../assets/lidar3.webp";
-import lidar4 from "../../assets/lidar4.jpg";
+import lidarHero from "../../assets/Lidar/lidar1.webp";
+import lidar2 from "../../assets/Lidar/lidar2.gif";
+import lidar3 from "../../assets/Lidar/lidar3.webp";
+import lidar4 from "../../assets/Lidar/lidar4.webp";
+
 
 export default function LidarSurvey() {
   const [openIndex, setOpenIndex] = useState(null);

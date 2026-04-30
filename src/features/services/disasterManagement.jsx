@@ -4,11 +4,11 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { FaRegChartBar, FaChevronDown } from "react-icons/fa";
 
-import heroImg from "../../assets/disaster1.png";
-import disaster2 from "../../assets/disaster2.jpg";
-import disaster3 from "../../assets/disaster3.jpg";
-import disaster4 from "../../assets/disaster4.jpg";
-import disaster5 from "../../assets/disaster5.jpg";
+import heroImg from "../../assets/Disaster/disaster1.webp";
+import disaster2 from "../../assets/Disaster/disaster2.webp";
+import disaster3 from "../../assets/Disaster/disaster3.webp";
+import disaster4 from "../../assets/Disaster/disaster4.webp";
+import disaster5 from "../../assets/Disaster/disaster5.webp";
 
 export default function DisasterManagement() {
   const [openIndex, setOpenIndex] = useState(null);
