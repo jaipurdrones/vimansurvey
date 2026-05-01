@@ -33,8 +33,8 @@ import SmartCitySurvey from "../features/services/smart-city-survey";
 import SolarSurvey from "../features/services/solar";
 
 // Solutions
-import DroneDataProcessing from "../features/services/solutions/drone-insight-system";
-import PilotsOnProject from "../features/services/solutions/pilots-on-project";
+import DroneDataProcessing from "../features/services/Solutions/drone-insight-system";
+import PilotsOnProject from "../features/services/Solutions/pilots-on-project";
 
 export default function App() {
   return (
