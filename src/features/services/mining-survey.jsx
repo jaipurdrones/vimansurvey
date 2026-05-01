@@ -4,9 +4,29 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import miningImg from "../../assets/Mining/mining.webp";
 import mining1 from "../../assets/Mining/mining1.webp";
-
+import FAQ from "../../shared/components/FAQ";
 
 export default function MiningSurvey() {
+
+  const faqs = [
+    {
+      q: "What is a Mining Drone Survey?",
+      a: "It is the use of UAVs to capture aerial data for stockpile measurement, excavation tracking, and 3D mapping of mining sites."
+    },
+    {
+      q: "How accurate are drone mining surveys?",
+      a: "Drone surveys provide centimeter-level accuracy using RTK/PPK GPS and advanced photogrammetry techniques."
+    },
+    {
+      q: "Can drone surveys replace traditional mining surveys?",
+      a: "They do not completely replace them but significantly enhance speed, safety, and accuracy of traditional surveying methods."
+    },
+    {
+      q: "What data is collected during mining drone surveys?",
+      a: "Drones collect RGB images, 3D point clouds, terrain data, and volumetric measurements for analysis and reporting."
+    }
+  ];
+
   return (
     <section className="bg-gradient-to-b from-gray-200 via-gray-100 to-gray-50 text-gray-800">
       <Helmet>
@@ -44,7 +64,6 @@ export default function MiningSurvey() {
           </p>
         </motion.div>
       </div>
-
 
       {/* 🧭 Overview Section */}
       <div className="max-w-6xl mx-auto px-6 py-16 space-y-12">
@@ -103,7 +122,7 @@ export default function MiningSurvey() {
             <img
               src={mining1}
               alt="Mining Drone Survey"
-              className="rounded-2xl shadow-lg object-cover max-h-[320px]"
+              className="rounded-2xl shadow-lg object-cover max-h-[320px] aspect-[4/3]"
             />
           </motion.div>
         </div>
@@ -211,6 +230,9 @@ export default function MiningSurvey() {
           </div>
         </motion.div>
       </div>
+
+      {/* FAQ */}
+      <FAQ faqs={faqs} />
 
       {/* 🤝 CTA Section */}
       <div className="bg-gray-100 py-16 md:py-20 text-center">

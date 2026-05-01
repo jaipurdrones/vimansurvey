@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import FAQ from "../../shared/components/FAQ";
 
 export default function Services({ items = [] }) {
   return (

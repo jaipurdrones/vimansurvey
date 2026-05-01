@@ -1,8 +1,9 @@
 // src/pages/applications/PipelineInspection.jsx
-import React, { useState } from "react";
+import React from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { FaRegChartBar, FaChevronDown } from "react-icons/fa";
+import { FaRegChartBar } from "react-icons/fa";
+import FAQ from "../../shared/components/FAQ";
 
 import pipelineHero from "../../assets/Pipeline/pipeline.webp";
 import img2 from "../../assets/Pipeline/pipeline1.webp";
@@ -11,7 +12,6 @@ import img4 from "../../assets/Pipeline/pipeline3.webp";
 import img5 from "../../assets/Pipeline/pipeline4.webp";
 
 export default function PipelineInspection() {
-  const [openIndex, setOpenIndex] = useState(null);
 
   const faqs = [
     {
@@ -60,7 +60,7 @@ export default function PipelineInspection() {
         </div>
       </section>
 
-      {/* Overview + Single Image (NO GRID) */}
+      {/* Overview */}
       <section className="max-w-6xl mx-auto px-6 py-20 text-center">
         <h2 className="text-3xl font-semibold text-primary-700 mb-4">
           Advanced Drone Solutions for Pipeline Integrity
@@ -76,14 +76,14 @@ export default function PipelineInspection() {
           <img
             src={img2}
             alt="Pipeline Overview"
-            className="rounded-2xl shadow-xl w-full md:w-3/4 object-cover max-h-[420px]"
+            className="rounded-2xl shadow-xl w-full md:w-3/4 object-cover aspect-[16/9]"
           />
         </div>
       </section>
 
-      {/* Sections */}
+      {/* Section 1 - Left */}
       <div className="max-w-6xl mx-auto px-6 py-20 space-y-24">
-        {/* Section 1 */}
+
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
             <h2 className="text-3xl font-semibold text-primary-700 mb-4">
@@ -97,16 +97,13 @@ export default function PipelineInspection() {
             </p>
           </div>
           <div className="flex justify-center">
-            <img src={img3} className="rounded-xl shadow-lg w-full md:w-4/5 object-cover max-h-[360px]" />
+            <img src={img3} className="rounded-xl shadow-lg w-full object-cover aspect-[16/9]" />
           </div>
         </div>
 
-        {/* Section 2 */}
-        <div className="grid md:grid-cols-2 gap-12 items-center md:flex-row-reverse">
-          <div className="order-2 md:order-1 flex justify-center">
-            <img src={img4} className="rounded-xl shadow-lg w-full md:w-4/5 object-cover max-h-[360px]" />
-          </div>
-          <div className="order-1 md:order-2">
+        {/* Section 2 - Right */}
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="md:order-2">
             <h2 className="text-3xl font-semibold text-primary-700 mb-4">
               Right-of-Way & Encroachment Monitoring
             </h2>
@@ -117,9 +114,12 @@ export default function PipelineInspection() {
               Maintain compliance, reduce risks, and protect critical infrastructure efficiently.
             </p>
           </div>
+          <div className="flex justify-center md:order-1">
+            <img src={img4} className="rounded-xl shadow-lg w-full object-cover aspect-[16/9]" />
+          </div>
         </div>
 
-        {/* Section 3 */}
+        {/* Section 3 - Left */}
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
             <h2 className="text-3xl font-semibold text-primary-700 mb-4">
@@ -133,12 +133,12 @@ export default function PipelineInspection() {
             </p>
           </div>
           <div className="flex justify-center">
-            <img src={img5} className="rounded-xl shadow-lg w-full md:w-4/5 object-cover max-h-[360px]" />
+            <img src={img5} className="rounded-xl shadow-lg w-full object-cover aspect-[16/9]" />
           </div>
         </div>
       </div>
-    
-      {/* Services Section */}
+
+      {/* Services */}
       <section className="max-w-6xl mx-auto px-6 py-16">
         <h3 className="text-3xl font-semibold text-center text-primary-700 mb-10">
           Core Pipeline Inspection Services
@@ -152,53 +152,27 @@ export default function PipelineInspection() {
             { title: "Real-Time Corridor Patrol", desc: "Continuous monitoring with live-streaming capabilities." },
             { title: "Data Reporting & Analytics", desc: "Detailed reports and dashboards for engineers and regulators." },
           ].map((service, i) => (
-            <div key={i} className="p-6 bg-gray-50 rounded-xl shadow hover:shadow-md transition">
+            <div key={i} className="p-6 bg-gray-50 rounded-xl shadow">
               <h4 className="text-xl font-semibold text-primary-700 mb-3">{service.title}</h4>
-              <p className="text-gray-700 text-sm leading-relaxed">{service.desc}</p>
+              <p className="text-gray-700 text-sm">{service.desc}</p>
             </div>
           ))}
         </div>
       </section>
 
-      {/* Benefits Section */}
+      {/* Benefits */}
       <section className="bg-primary-700 text-white py-20 px-6 text-center">
         <div className="max-w-6xl mx-auto">
           <h3 className="text-3xl font-semibold mb-6">Why Choose Drone Pipeline Inspection?</h3>
           <p className="text-gray-200 mb-10 max-w-3xl mx-auto">
             Real-time aerial data, safety, and cost savings — revolutionizing pipeline monitoring and maintenance.
           </p>
-          <div className="grid md:grid-cols-3 gap-8 text-left">
-            {[
-              { title: "Early Leak Detection", desc: "Identify potential leaks before failures occur." },
-              { title: "Continuous Route Surveillance", desc: "Automated drone patrols for improved visibility." },
-              { title: "Reduced Operational Costs", desc: "Fewer field visits and faster data-driven insights." },
-            ].map((benefit, i) => (
-              <div key={i} className="p-6 border border-white/30 rounded-xl bg-white/10 hover:bg-white/20 transition">
-                <h4 className="text-xl font-semibold text-white mb-3">{benefit.title}</h4>
-                <p className="text-white/90 text-sm">{benefit.desc}</p>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 
-      {/* FAQ (NO FRAMER) */}
+      {/* FAQ (IMPORT BASED) */}
       <section className="max-w-6xl mx-auto px-6 py-12">
-        <h3 className="text-3xl text-center text-primary-700 mb-8">
-          Frequently Asked Questions
-        </h3>
-        {faqs.map((f, i) => (
-          <div key={i} className="border rounded-lg mb-3">
-            <button
-              onClick={() => setOpenIndex(openIndex === i ? null : i)}
-              className="w-full flex justify-between p-4"
-            >
-              <span>{f.q}</span>
-              <FaChevronDown className={openIndex === i ? "rotate-180" : ""} />
-            </button>
-            {openIndex === i && <p className="p-4 text-gray-700">{f.a}</p>}
-          </div>
-        ))}
+        <FAQ faqs={faqs} />
       </section>
 
       {/* CTA */}

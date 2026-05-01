@@ -1,8 +1,8 @@
 // src/pages/applications/SmartCitySurvey.jsx
-import React, { useState } from "react";
+import React from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { FaRegChartBar, FaChevronDown } from "react-icons/fa";
+import FAQ from "../../shared/components/FAQ";
 
 import heroImg from "../../assets/Smart/smart1.webp";
 import img2 from "../../assets/Smart/smart2.webp";
@@ -11,8 +11,6 @@ import img4 from "../../assets/Smart/smart4.webp";
 import img5 from "../../assets/Smart/smart5.webp";
 
 export default function SmartCitySurvey() {
-  const [openIndex, setOpenIndex] = useState(null);
-
   const faqs = [
     {
       q: "What is a Smart City Drone Survey?",
@@ -32,6 +30,13 @@ export default function SmartCitySurvey() {
     },
   ];
 
+  // reusable image wrapper (FORCED 5:3)
+  const ImgBox = ({ src, alt }) => (
+    <div className="w-full aspect-[5/3] overflow-hidden rounded-xl shadow-lg">
+      <img src={src} alt={alt} className="w-full h-full object-cover" />
+    </div>
+  );
+
   return (
     <main className="bg-white text-gray-800">
       <Helmet>
@@ -42,7 +47,7 @@ export default function SmartCitySurvey() {
         />
       </Helmet>
 
-      {/* Hero Section */}
+      {/* HERO (UNCHANGED) */}
       <section className="relative flex items-center justify-center text-center text-white overflow-hidden min-h-[65vh] md:min-h-[85vh] lg:min-h-[95vh]">
         <img
           src={heroImg}
@@ -60,8 +65,10 @@ export default function SmartCitySurvey() {
         </div>
       </section>
 
-      {/* Overview + Single Image */}
+      {/* OVERVIEW (LEFT IMAGE) */}
       <section className="max-w-6xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-12 items-center">
+        <ImgBox src={img2} alt="Smart City Overview" />
+
         <div>
           <h2 className="text-3xl font-semibold text-primary-700 mb-4">
             Transforming Urban Planning with Drone Intelligence
@@ -74,18 +81,10 @@ export default function SmartCitySurvey() {
             By integrating aerial intelligence into GIS platforms, planners and developers can make informed, data-driven decisions that enhance city livability, efficiency, and sustainability.
           </p>
         </div>
-        <div className="flex justify-center">
-          <img
-            src={img2}
-            alt="Smart City Overview"
-            className="rounded-2xl shadow-xl w-full md:w-4/5 object-cover max-h-[420px]"
-          />
-        </div>
       </section>
 
-      {/* Single Image Sections */}
+      {/* SECTION 1 (RIGHT IMAGE) */}
       <div className="max-w-6xl mx-auto px-6 py-20 space-y-24">
-        {/* Section 1 */}
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
             <h2 className="text-3xl font-semibold text-primary-700 mb-4">
@@ -98,25 +97,15 @@ export default function SmartCitySurvey() {
               These models allow planners to visualize urban growth, optimize asset utilization, and plan future development efficiently.
             </p>
           </div>
-          <div className="flex justify-center">
-            <img
-              src={img3}
-              alt="3D City Modeling"
-              className="rounded-xl shadow-lg w-full md:w-4/5 object-cover max-h-[360px]"
-            />
-          </div>
+
+          <ImgBox src={img3} alt="3D City Modeling" />
         </div>
 
-        {/* Section 2 */}
-        <div className="grid md:grid-cols-2 gap-12 items-center md:flex-row-reverse">
-          <div className="order-2 md:order-1 flex justify-center">
-            <img
-              src={img4}
-              alt="Traffic Analysis Drone"
-              className="rounded-xl shadow-lg w-full md:w-4/5 object-cover max-h-[360px]"
-            />
-          </div>
-          <div className="order-1 md:order-2">
+        {/* SECTION 2 (LEFT IMAGE AGAINST TEXT) */}
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          <ImgBox src={img4} alt="Traffic Analysis Drone" />
+
+          <div>
             <h2 className="text-3xl font-semibold text-primary-700 mb-4">
               Traffic & Mobility Analysis
             </h2>
@@ -129,7 +118,7 @@ export default function SmartCitySurvey() {
           </div>
         </div>
 
-        {/* Section 3 */}
+        {/* SECTION 3 (RIGHT IMAGE) */}
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
             <h2 className="text-3xl font-semibold text-primary-700 mb-4">
@@ -142,21 +131,17 @@ export default function SmartCitySurvey() {
               Ensure compliance with environmental regulations and integrate eco-friendly solutions in urban development.
             </p>
           </div>
-          <div className="flex justify-center">
-            <img
-              src={img5}
-              alt="Environmental Assessment Drone"
-              className="rounded-xl shadow-lg w-full md:w-4/5 object-cover max-h-[360px]"
-            />
-          </div>
+
+          <ImgBox src={img5} alt="Environmental Assessment Drone" />
         </div>
       </div>
-   
-      {/* Services Section */}
+
+      {/* SERVICES (UNCHANGED CONTENT) */}
       <section className="max-w-6xl mx-auto px-6 py-16">
         <h3 className="text-3xl font-semibold text-center text-primary-700 mb-10">
           Smart City Drone Services
         </h3>
+
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {[
             { title: "Aerial Mapping & LiDAR", desc: "Accurate city-wide mapping and point clouds for planning and monitoring." },
@@ -174,20 +159,18 @@ export default function SmartCitySurvey() {
         </div>
       </section>
 
-      {/* Benefits Section */}
+      {/* BENEFITS (UNCHANGED CONTENT) */}
       <section className="bg-primary-700 text-white py-20 px-6 text-center">
         <div className="max-w-6xl mx-auto">
           <h3 className="text-3xl font-semibold mb-6">Why Choose Viman Survey?</h3>
-          <p className="text-gray-200 mb-10 max-w-3xl mx-auto">
-            Fast, accurate, and actionable aerial data to support sustainable urban planning, infrastructure optimization, and smart city initiatives.
-          </p>
+
           <div className="grid md:grid-cols-3 gap-8 text-left">
             {[
               { title: "Faster Execution", desc: "Drone surveys reduce on-ground work, accelerating project timelines." },
               { title: "High Accuracy", desc: "LiDAR and photogrammetry ensure precise mapping for critical infrastructure." },
               { title: "Sustainable Planning", desc: "Use environmental and spatial data to support eco-friendly city development." },
             ].map((b, i) => (
-              <div key={i} className="p-6 border border-white/30 rounded-xl shadow-sm bg-white/10 hover:bg-white/20 transition">
+              <div key={i} className="p-6 border border-white/30 rounded-xl bg-white/10">
                 <h4 className="text-xl font-semibold text-white mb-3">{b.title}</h4>
                 <p className="text-white/90 text-sm">{b.desc}</p>
               </div>
@@ -196,40 +179,10 @@ export default function SmartCitySurvey() {
         </div>
       </section>
 
-      {/* FAQ (no framer now) */}
-      <section className="max-w-6xl mx-auto px-6 py-12 sm:py-16">
-        <h3 className="text-3xl font-semibold text-center text-primary-700 mb-8">
-          Frequently Asked Questions
-        </h3>
+      {/* FAQ IMPORT ONLY */}
+      <FAQ faqs={faqs} />
 
-        <div className="space-y-3">
-          {faqs.map((f, idx) => {
-            const isOpen = openIndex === idx;
-            return (
-              <div key={idx} className="border border-gray-200 rounded-lg overflow-hidden">
-                <button
-                  onClick={() => setOpenIndex(isOpen ? null : idx)}
-                  className="w-full flex items-center justify-between px-4 py-3 text-left bg-white hover:bg-gray-50 transition"
-                >
-                  <div className="flex items-center gap-3">
-                    <FaRegChartBar className="text-primary-600" />
-                    <span className="font-medium text-gray-800">{f.q}</span>
-                  </div>
-                  <FaChevronDown className={`transition-transform ${isOpen ? "rotate-180" : ""}`} />
-                </button>
-
-                {isOpen && (
-                  <div className="px-4 pb-4 bg-white text-gray-700">
-                    <p className="pt-2 leading-relaxed">{f.a}</p>
-                  </div>
-                )}
-              </div>
-            );
-          })}
-        </div>
-      </section>
-
-      {/* CTA */}
+      {/* CTA (UNCHANGED) */}
       <section className="bg-primary-700 text-white py-16 text-center">
         <div className="max-w-6xl mx-auto px-6">
           <h3 className="text-3xl font-semibold mb-4">

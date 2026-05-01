@@ -3,7 +3,10 @@ import React, { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { FaRegChartBar, FaChevronDown } from "react-icons/fa";
+import FAQ from "../../shared/components/FAQ";
 
+
+// images
 import forest1 from "../../assets/Forest/forest1.webp";
 import forest2 from "../../assets/Forest/forest2.webp";
 import forest3 from "../../assets/Forest/forest3.webp";
@@ -32,6 +35,21 @@ export default function ForestWildlifeSurvey() {
     },
   ];
 
+  // uniform image wrapper (16:9)
+  const Img = ({ src, alt }) => (
+    <div className="w-full aspect-video overflow-hidden rounded-xl shadow-lg">
+      <img
+        src={src}
+        alt={alt}
+        className="w-full h-full object-cover"
+      />
+    </div>
+  );
+
+  const toggleFAQ = (i) => {
+    setOpenIndex(openIndex === i ? null : i);
+  };
+
   return (
     <main className="bg-white text-gray-800">
       <Helmet>
@@ -42,7 +60,7 @@ export default function ForestWildlifeSurvey() {
         />
       </Helmet>
 
-      {/* Hero Section */}
+      {/* HERO (UNCHANGED) */}
       <section className="relative flex items-center justify-center text-center text-white overflow-hidden min-h-[65vh] md:min-h-[85vh] lg:min-h-[95vh]">
         <img
           src={forest1}
@@ -60,106 +78,83 @@ export default function ForestWildlifeSurvey() {
         </div>
       </section>
 
-      {/* Triple Image + Text Section */}
+      {/* SECTION 1 */}
       <section className="max-w-6xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-10 items-center">
         <div>
           <h2 className="text-3xl font-semibold text-primary-700 mb-4">
             Revolutionizing Wildlife & Forest Monitoring
           </h2>
-          <p className="text-gray-700 leading-relaxed mb-4 text-lg">
+          <p className="text-gray-700 mb-4 text-lg">
             <strong>Viman Survey</strong> utilizes drone technology to monitor forests and wildlife efficiently. Our drones capture high-resolution images, LiDAR scans, and thermal data for habitat mapping, anti-poaching surveillance, and biodiversity assessments.
           </p>
-          <p className="text-gray-700 leading-relaxed text-lg">
+          <p className="text-gray-700 text-lg">
             These insights empower conservationists to make timely, data-driven decisions while minimizing ecological disturbance.
           </p>
         </div>
+        <Img src={forest2} alt="Forest Survey" />
+      </section>
 
-        {/* Static Image */}
-        <div className="flex justify-center">
-          <img
-            src={forest2}
-            alt="Forest Survey"
-            className="rounded-2xl shadow-xl w-full max-h-[420px] object-cover"
-          />
+      {/* SECTION 2 */}
+      <section className="max-w-6xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-10 items-center">
+        <div className="order-2 md:order-1">
+          <Img src={forest3} alt="Wildlife Tracking Drone" />
+        </div>
+
+        <div className="order-1 md:order-2">
+          <h2 className="text-3xl font-semibold text-primary-700 mb-4">
+            Wildlife Tracking & Monitoring
+          </h2>
+          <p className="text-gray-700 mb-4 text-lg">
+            Using thermal imaging and GPS integration, our drones track animal movements and behavior patterns, enabling conservationists to assess population health and detect threats like poaching.
+          </p>
+          <p className="text-gray-700 text-lg">
+            This reduces human intrusion while providing high-resolution, real-time monitoring of sensitive wildlife habitats.
+          </p>
         </div>
       </section>
 
-      {/* Single Image Sections */}
-      <div className="max-w-6xl mx-auto px-6 py-20 space-y-24">
+      {/* SECTION 3 */}
+      <section className="max-w-6xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-10 items-center">
+        <div>
+          <h2 className="text-3xl font-semibold text-primary-700 mb-4">
+            Forest Health & Fire Monitoring
+          </h2>
+          <p className="text-gray-700 mb-4 text-lg">
+            Drones equipped with multispectral and thermal sensors monitor forest vegetation health, detect early-stage fires, and identify pest infestations for preventive conservation measures.
+          </p>
+          <p className="text-gray-700 text-lg">
+            This ensures proactive management of ecosystems, reducing damage and preserving biodiversity.
+          </p>
+        </div>
+        <Img src={forest4} alt="Forest Health Analysis" />
+      </section>
 
-        {/* Section 1 */}
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div>
-            <h2 className="text-3xl font-semibold text-primary-700 mb-4">
-              Wildlife Tracking & Monitoring
-            </h2>
-            <p className="text-gray-700 leading-relaxed mb-4 text-lg">
-              Using thermal imaging and GPS integration, our drones track animal movements and behavior patterns, enabling conservationists to assess population health and detect threats like poaching.
-            </p>
-            <p className="text-gray-700 leading-relaxed text-lg">
-              This reduces human intrusion while providing high-resolution, real-time monitoring of sensitive wildlife habitats.
-            </p>
-          </div>
-          <div className="flex justify-center">
-            <img
-              src={forest3}
-              alt="Wildlife Tracking Drone"
-              className="rounded-xl shadow-lg w-full md:w-4/5 object-cover max-h-[360px]"
-            />
-          </div>
+      {/* SECTION 4 */}
+      <section className="max-w-6xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-10 items-center">
+        <div className="order-2 md:order-1">
+          <Img src={forest5} alt="Habitat Mapping Drone" />
         </div>
 
-        {/* Section 2 */}
-        <div className="grid md:grid-cols-2 gap-12 items-center md:flex-row-reverse">
-          <div className="order-2 md:order-1 flex justify-center">
-            <img
-              src={forest4}
-              alt="Forest Health Analysis"
-              className="rounded-xl shadow-lg w-full md:w-4/5 object-cover max-h-[360px]"
-            />
-          </div>
-          <div className="order-1 md:order-2">
-            <h2 className="text-3xl font-semibold text-primary-700 mb-4">
-              Forest Health & Fire Monitoring
-            </h2>
-            <p className="text-gray-700 leading-relaxed mb-4 text-lg">
-              Drones equipped with multispectral and thermal sensors monitor forest vegetation health, detect early-stage fires, and identify pest infestations for preventive conservation measures.
-            </p>
-            <p className="text-gray-700 leading-relaxed text-lg">
-              This ensures proactive management of ecosystems, reducing damage and preserving biodiversity.
-            </p>
-          </div>
+        <div className="order-1 md:order-2">
+          <h2 className="text-3xl font-semibold text-primary-700 mb-4">
+            Habitat & Corridor Mapping
+          </h2>
+          <p className="text-gray-700 mb-4 text-lg">
+            Generate high-resolution 3D maps and orthomosaics to identify wildlife corridors, forest cover changes, and biodiversity zones.
+          </p>
+          <p className="text-gray-700 text-lg">
+            Accurate mapping supports reforestation, anti-poaching strategies, and long-term conservation planning.
+          </p>
         </div>
+      </section>
 
-        {/* Section 3 */}
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div>
-            <h2 className="text-3xl font-semibold text-primary-700 mb-4">
-              Habitat & Corridor Mapping
-            </h2>
-            <p className="text-gray-700 leading-relaxed mb-4 text-lg">
-              Generate high-resolution 3D maps and orthomosaics to identify wildlife corridors, forest cover changes, and biodiversity zones.
-            </p>
-            <p className="text-gray-700 leading-relaxed text-lg">
-              Accurate mapping supports reforestation, anti-poaching strategies, and long-term conservation planning.
-            </p>
-          </div>
-          <div className="flex justify-center">
-            <img
-              src={forest5}
-              alt="Habitat Mapping Drone"
-              className="rounded-xl shadow-lg w-full md:w-4/5 object-cover max-h-[360px]"
-            />
-          </div>
-        </div>
-      </div>
-
-      {/* Key Applications Section */}
-      <div className="bg-gray-50 py-20 px-6">
+      {/* APPLICATIONS */}
+      <section className="bg-gray-50 py-20 px-6">
         <div className="max-w-6xl mx-auto text-center">
           <h3 className="text-3xl font-semibold text-primary-700 mb-10">
             Key Applications of Drone Surveys in Forest & Wildlife Management
           </h3>
+
           <div className="grid md:grid-cols-3 gap-10">
             {[
               {
@@ -175,74 +170,49 @@ export default function ForestWildlifeSurvey() {
                 desc: "Analyze vegetation and animal populations for ecosystem conservation.",
               },
             ].map((item, i) => (
-              <div key={i} className="p-6 bg-white rounded-lg shadow-sm border border-gray-200 hover:shadow-md transition">
-                <h4 className="text-xl font-semibold text-primary-700 mb-3">{item.title}</h4>
-                <p className="text-gray-700 text-sm leading-relaxed">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* Benefits Section */}
-      <section className="bg-primary-700 text-white py-20 px-6 text-center">
-        <div className="max-w-6xl mx-auto">
-          <h3 className="text-3xl font-semibold mb-6">Benefits of Drone-Based Surveys</h3>
-          <p className="text-gray-200 mb-10 max-w-3xl mx-auto">
-            Drones provide a safe, efficient, and sustainable way to monitor forests and wildlife, delivering actionable insights for conservation and resource management.
-          </p>
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              { title: "Eco-Safe Data Collection", desc: "Minimal disturbance to wildlife habitats while capturing rich aerial insights." },
-              { title: "High-Resolution & Real-Time Data", desc: "Accurate, fast, and repeatable data collection for continuous monitoring." },
-              { title: "GIS & Analytics Integration", desc: "Seamless integration with geospatial systems for detailed habitat analysis and reporting." },
-            ].map((b, i) => (
-              <div key={i} className="p-6 bg-white/10 rounded-lg border border-white/20 hover:bg-white/20 transition">
-                <h4 className="text-xl font-semibold text-white mb-3">{b.title}</h4>
-                <p className="text-white/90 text-sm">{b.desc}</p>
+              <div key={i} className="p-6 bg-white rounded-lg shadow border">
+                <h4 className="text-xl font-semibold text-primary-700 mb-3">
+                  {item.title}
+                </h4>
+                <p className="text-gray-700 text-sm">{item.desc}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* FAQ Section (no framer now) */}
-      <section className="max-w-6xl mx-auto px-6 py-12 sm:py-16">
-        <h3 className="text-3xl font-semibold text-center text-primary-700 mb-8">
-          Frequently Asked Questions
+      {/* BENEFITS */}
+      <section className="bg-primary-700 text-white py-20 text-center px-6">
+        <h3 className="text-3xl font-semibold mb-6">
+          Benefits of Drone-Based Surveys
         </h3>
 
-        <div className="space-y-3">
-          {faqs.map((f, idx) => {
-            const isOpen = openIndex === idx;
-            return (
-              <div key={idx} className="border border-gray-200 rounded-lg overflow-hidden">
-                <button
-                  onClick={() => setOpenIndex(isOpen ? null : idx)}
-                  className="w-full flex items-center justify-between px-4 py-3 text-left bg-white hover:bg-gray-50 transition"
-                >
-                  <div className="flex items-center gap-3">
-                    <FaRegChartBar className="text-primary-600" />
-                    <span className="font-medium text-gray-800">{f.q}</span>
-                  </div>
-                  <FaChevronDown
-                    className={`transition-transform duration-300 ${
-                      isOpen ? "rotate-180" : "rotate-0"
-                    }`}
-                  />
-                </button>
-
-                {isOpen && (
-                  <div className="px-4 pb-4 bg-white text-gray-700">
-                    <p className="pt-2 leading-relaxed">{f.a}</p>
-                  </div>
-                )}
-              </div>
-            );
-          })}
+        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto text-left">
+          {[
+            {
+              title: "Eco-Safe Data Collection",
+              desc: "Minimal disturbance to wildlife habitats while capturing rich aerial insights.",
+            },
+            {
+              title: "High-Resolution & Real-Time Data",
+              desc: "Accurate, fast, and repeatable data collection for continuous monitoring.",
+            },
+            {
+              title: "GIS & Analytics Integration",
+              desc: "Seamless integration with geospatial systems for detailed habitat analysis and reporting.",
+            },
+          ].map((b, i) => (
+            <div key={i} className="p-6 bg-white/10 rounded-lg">
+              <h4 className="font-semibold mb-2">{b.title}</h4>
+              <p className="text-sm text-white/90">{b.desc}</p>
+            </div>
+          ))}
         </div>
       </section>
 
+      {/* FAQ (UPDATED CLEAN COMPONENT USE) */}
+      <FAQ faqs={faqs} />
+      
       {/* CTA */}
       <section className="bg-primary-700 text-white py-16 text-center">
         <div className="max-w-6xl mx-auto px-6">
@@ -252,9 +222,10 @@ export default function ForestWildlifeSurvey() {
           <p className="text-gray-200 max-w-2xl mx-auto mb-6">
             Collaborate with <strong>Viman Survey</strong> to enhance biodiversity, improve forest management, and ensure sustainable conservation with cutting-edge drone technology.
           </p>
+
           <Link
             to="/contact"
-            className="inline-block bg-white text-primary-700 px-8 py-3 rounded-full font-medium hover:bg-gray-100 transition"
+            className="inline-block bg-white text-primary-700 px-8 py-3 rounded-full font-medium"
           >
             Get in Touch
           </Link>

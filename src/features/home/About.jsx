@@ -1,6 +1,6 @@
 import React from "react";
 
-// ✅ FIXED asset paths (IMPORTANT)
+// Assets
 import aboutImg from "../../assets/About/about.webp";
 import rocketIcon from "../../assets/icons/Rocket.svg";
 import timeIcon from "../../assets/icons/time.svg";
@@ -9,180 +9,170 @@ import mapIcon from "../../assets/icons/map.svg";
 
 export default function About() {
   return (
-    <section className="bg-white text-gray-800">
-      {/* Hero Section */}
+    <section className="bg-white text-gray-700">
+
+      {/* ================= HERO ================= */}
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 items-center gap-10 px-6 py-20">
+        
+        {/* Image */}
         <div className="flex justify-center md:justify-start">
           <img
             src={aboutImg}
             alt="Drone Survey Operations"
-            className="rounded-md shadow-md w-full md:w-[90%] object-cover"
+            className="rounded-xl shadow-lg w-full md:w-[90%] object-cover"
+            loading="lazy"
           />
         </div>
+
+        {/* Text */}
         <div className="space-y-4">
-          <h1 className="text-4xl md:text-5xl font-bold text-[#1d1d3f]">
+          <h1 className="text-4xl md:text-5xl font-bold text-primary-700 leading-tight">
             Flying High, Serving Higher
           </h1>
+
           <p className="text-lg text-gray-500">
-            Elevating Industries with Our Top-Tier Drone Services.
+            Elevating industries with advanced drone-powered solutions.
           </p>
         </div>
       </div>
 
-      {/* About Description */}
-      <div className="bg-gradient-to-b from-[#f9f9f9] to-white py-16 px-6">
+      {/* ================= ABOUT ================= */}
+      <div className="bg-gradient-to-b from-gray-50 to-white py-16 px-6">
         <div className="max-w-6xl mx-auto text-center">
-          <div className="flex items-center justify-center gap-4 mb-6">
-            <span className="w-12 h-[2px] bg-[#b9975b]"></span>
-            <h2 className="text-3xl md:text-4xl font-semibold text-[#1d1d3f]">
-              About Us
-            </h2>
-            <span className="w-12 h-[2px] bg-[#b9975b]"></span>
-          </div>
 
-          <div className="text-left space-y-5 text-gray-700 leading-relaxed">
+          {/* Section Title */}
+          <SectionTitle title="About Us" />
+
+          {/* Content */}
+          <div className="text-left space-y-5 leading-relaxed text-gray-600">
             <p>
-              <strong>Viman Survey Pvt. Ltd.</strong>, established in 2020, has
-              rapidly grown into one of India’s most trusted drone solutions
-              providers. Our foundation is built on redefining surveying and
-              mapping through innovative drone technologies and aerial
-              intelligence.
+              <strong className="text-gray-800">Viman Survey Pvt. Ltd.</strong>, established in 2020, 
+              has rapidly grown into one of India’s most trusted drone solutions providers. 
+              We redefine surveying through cutting-edge UAV technology and aerial intelligence.
             </p>
 
             <p>
-              We are India’s most reliable{" "}
-              <strong>drone survey company</strong>, driven by a team of skilled
-              professionals with years of experience. We believe UAVs offer a
-              modern approach to data collection — accurate, cost-effective, and
-              efficient. Our services empower clients to make informed
-              decisions, leveraging high-resolution aerial imagery and advanced
-              mapping systems.
+              Our team combines industry expertise with innovation to deliver 
+              <strong className="text-gray-800"> accurate, cost-effective, and fast data solutions</strong>. 
+              From infrastructure to agriculture, we empower smarter decision-making using 
+              high-resolution aerial insights.
             </p>
 
             <p>
-              Viman Survey specializes in a comprehensive range of services,
-              including GIS & topographic surveys, drone inspections, mapping,
-              powerline monitoring, smart city projects, flood assessments,
-              solar thermal inspections, property documentation, volumetric
-              analysis, crop health monitoring, and 3D modeling. We are
-              committed to precision, safety, and innovation — continuously
-              improving the way data transforms industries across India.
+              Our services include GIS & topographic surveys, drone inspections, 
+              powerline monitoring, smart city projects, flood assessments, 
+              solar inspections, volumetric analysis, crop monitoring, and 3D modeling.
             </p>
           </div>
         </div>
       </div>
 
-      {/* Vision & Mission Section (Rocket on Left) */}
-      <div className="bg-gradient-to-r from-[#f4f4f4] to-white py-16 px-6">
-        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center md:items-start gap-10">
-          {/* Rocket Left Side */}
-          <div className="flex-shrink-0 flex justify-center md:justify-start w-full md:w-1/3">
+      {/* ================= VISION & MISSION ================= */}
+      <div className="bg-gradient-to-r from-gray-100 to-white py-16 px-6">
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10">
+
+          {/* Icon */}
+          <div className="flex justify-center md:justify-start w-full md:w-1/3">
             <img
               src={rocketIcon}
               alt="Rocket Icon"
-              className="h-48 w-48 object-contain"
+              className="h-40 w-40 object-contain"
+              loading="lazy"
             />
           </div>
 
-          {/* Vision & Mission Right Side */}
-          <div className="flex flex-col gap-10 w-full md:w-2/3">
-            {/* Vision */}
+          {/* Text */}
+          <div className="space-y-8 w-full md:w-2/3">
+
             <div>
-              <h3 className="text-2xl font-semibold text-[#1d1d3f]">
+              <h3 className="text-2xl font-semibold text-primary-700">
                 Our Vision
               </h3>
               <p className="text-gray-600 mt-2 leading-relaxed">
-                Our Vision is to evaluate the Earth for evolution through the
-                help of aerial intelligence and advanced drone mapping.
+                To transform how the world understands and interacts with the Earth 
+                through aerial intelligence and advanced drone mapping.
               </p>
             </div>
 
-            {/* Mission */}
             <div>
-              <h3 className="text-2xl font-semibold text-[#1d1d3f]">
+              <h3 className="text-2xl font-semibold text-primary-700">
                 Our Mission
               </h3>
               <p className="text-gray-600 mt-2 leading-relaxed">
-                Our Mission is to become the most trusted AI-powered aerial data
-                platform across the globe, delivering innovation and accuracy
-                for every project.
+                To become the most trusted AI-powered aerial data platform, 
+                delivering innovation, speed, and accuracy across industries.
               </p>
             </div>
+
           </div>
         </div>
       </div>
 
-      {/* Benefits Section */}
+      {/* ================= BENEFITS ================= */}
       <div className="bg-white py-20 px-6">
         <div className="max-w-6xl mx-auto text-center">
-          <div className="flex items-center justify-center gap-4 mb-10">
-            <span className="w-12 h-[2px] bg-[#b9975b]"></span>
-            <h2 className="text-3xl font-semibold text-[#1d1d3f]">
-              What are the Benefits of Drones in Surveying?
-            </h2>
-            <span className="w-12 h-[2px] bg-[#b9975b]"></span>
-          </div>
 
-          <div className="grid md:grid-cols-3 gap-10 text-center">
-            {/* Benefit 1 */}
-            <div className="space-y-4">
-              <div className="flex justify-center">
-                <img
-                  src={timeIcon}
-                  alt="Reduce Time"
-                  className="h-40 w-40 object-contain"
-                />
-              </div>
-              <h4 className="font-semibold text-[#1d1d3f]">
-                Reduce Field Time And Survey Costs
-              </h4>
-              <p className="text-gray-600 text-sm leading-relaxed">
-                Capturing topographic data with a drone is up to five times
-                faster than traditional methods, requiring less manpower and
-                delivering results at lower costs.
-              </p>
-            </div>
+          <SectionTitle title="Benefits of Drone Surveying" />
 
-            {/* Benefit 2 */}
-            <div className="space-y-4">
-              <div className="flex justify-center">
-                <img
-                  src={dataIcon}
-                  alt="Accurate Data"
-                  className="h-40 w-40 object-contain"
-                />
-              </div>
-              <h4 className="font-semibold text-[#1d1d3f]">
-                Provide Accurate And Exhaustive Data
-              </h4>
-              <p className="text-gray-600 text-sm leading-relaxed">
-                Drone flights capture thousands of measurements, providing
-                highly detailed 3D models and orthomosaics beyond what
-                traditional tools can achieve.
-              </p>
-            </div>
+          <div className="grid md:grid-cols-3 gap-10">
 
-            {/* Benefit 3 */}
-            <div className="space-y-4">
-              <div className="flex justify-center">
-                <img
-                  src={mapIcon}
-                  alt="Inaccessible Areas"
-                  className="h-40 w-40 object-contain"
-                />
-              </div>
-              <h4 className="font-semibold text-[#1d1d3f]">
-                Map Otherwise Inaccessible Areas
-              </h4>
-              <p className="text-gray-600 text-sm leading-relaxed">
-                Drones can reach steep slopes, rough terrain, or hazardous zones
-                — capturing critical data where traditional surveying methods
-                cannot.
-              </p>
-            </div>
+            <BenefitCard
+              icon={timeIcon}
+              title="Faster & Cost-Effective"
+              desc="Drone surveys are up to 5x faster than traditional methods, reducing manpower and operational costs."
+            />
+
+            <BenefitCard
+              icon={dataIcon}
+              title="High Accuracy Data"
+              desc="Capture thousands of precise data points for detailed 3D models and orthomosaic maps."
+            />
+
+            <BenefitCard
+              icon={mapIcon}
+              title="Access Difficult Areas"
+              desc="Survey steep terrain, hazardous zones, and remote locations safely and efficiently."
+            />
+
           </div>
         </div>
       </div>
     </section>
+  );
+}
+
+/* ================= REUSABLE COMPONENTS ================= */
+
+function SectionTitle({ title }) {
+  return (
+    <div className="flex items-center justify-center gap-4 mb-10">
+      <span className="w-12 h-[2px] bg-primary-500"></span>
+      <h2 className="text-3xl md:text-4xl font-semibold text-primary-700">
+        {title}
+      </h2>
+      <span className="w-12 h-[2px] bg-primary-500"></span>
+    </div>
+  );
+}
+
+function BenefitCard({ icon, title, desc }) {
+  return (
+    <div className="space-y-4 text-center p-4 rounded-lg hover:shadow-md transition">
+      
+      <div className="flex justify-center">
+        <img
+          src={icon}
+          alt={title}
+          className="h-32 w-32 object-contain"
+          loading="lazy"
+        />
+      </div>
+
+      <h4 className="font-semibold text-primary-700">{title}</h4>
+
+      <p className="text-gray-600 text-sm leading-relaxed">
+        {desc}
+      </p>
+    </div>
   );
 }

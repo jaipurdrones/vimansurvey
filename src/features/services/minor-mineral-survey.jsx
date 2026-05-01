@@ -3,9 +3,30 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import surveyImg from "../../assets/Minormineral/minor-mineral-banner.webp";
-import minormineral1 from "../../assets/Minormineral/minormineral1.webp"
+import minormineral1 from "../../assets/Minormineral/minormineral1.webp";
+import FAQ from "../../shared/components/FAQ";
 
 export default function MinorMineralSurvey() {
+
+  const faqs = [
+    {
+      q: "What is a Minor Mineral Drone Survey?",
+      a: "It is a drone-based mapping method used to measure and monitor minor mineral mining areas using high-accuracy aerial data."
+    },
+    {
+      q: "Is drone survey mandatory in Rajasthan mining operations?",
+      a: "Yes, the Rajasthan government has made drone-based surveys mandatory for accurate and transparent mineral reporting."
+    },
+    {
+      q: "How accurate are drone mineral surveys?",
+      a: "They provide centimeter-level accuracy using RTK/PPK enabled drones and photogrammetry processing."
+    },
+    {
+      q: "What outputs are provided after the survey?",
+      a: "We provide orthomosaics, DSM/DTM maps, volumetric reports, and GIS-ready datasets for compliance."
+    }
+  ];
+
   return (
     <section className="bg-gradient-to-b from-gray-200 via-gray-100 to-gray-50 text-gray-800">
       <Helmet>
@@ -14,7 +35,6 @@ export default function MinorMineralSurvey() {
           name="description"
           content="Viman Survey provides minor mineral drone survey and mapping services in Rajasthan with government-approved drone technology for sustainable and efficient mining operations."
         />
-        {/* ✅ Prevent mobile zoom / scaling issues */}
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
@@ -97,7 +117,7 @@ export default function MinorMineralSurvey() {
             <img
               src={minormineral1}
               alt="Drone Mining Survey"
-              className="rounded-2xl shadow-lg object-cover max-h-[320px]"
+              className="rounded-2xl shadow-lg object-cover max-h-[320px] aspect-[4/3]"
             />
           </motion.div>
         </div>
@@ -119,25 +139,18 @@ export default function MinorMineralSurvey() {
             Download government-approved guidelines and standard operating procedures
             for drone-based surveys in Rajasthan.
           </p>
+
           <div className="flex flex-wrap justify-center gap-4">
             <a
               href="/docs/rajasthan-notification.pdf"
-              className="bg-white text-primary-700 font-medium px-6 py-3 rounded-full 
-             border border-primary-600 hover:bg-primary-600 hover:text-white 
-             transition-all duration-300"
-              target="_blank"
-              rel="noopener noreferrer"
+              className="bg-white text-primary-700 font-medium px-6 py-3 rounded-full border border-primary-600 hover:bg-primary-600 hover:text-white transition-all duration-300"
             >
               Notification PDF
             </a>
 
             <a
               href="/docs/drone-survey-sop.pdf"
-              className="bg-white text-primary-700 font-medium px-6 py-3 rounded-full 
-             border border-primary-600 hover:bg-primary-600 hover:text-white 
-             transition-all duration-300"
-              target="_blank"
-              rel="noopener noreferrer"
+              className="bg-white text-primary-700 font-medium px-6 py-3 rounded-full border border-primary-600 hover:bg-primary-600 hover:text-white transition-all duration-300"
             >
               Drone Survey SOP
             </a>
@@ -189,6 +202,9 @@ export default function MinorMineralSurvey() {
         </div>
       </div>
 
+      {/* ❓ FAQ Section */}
+      <FAQ faqs={faqs} />
+
       {/* 🤝 CTA Section */}
       <div className="bg-gray-100 py-16 md:py-20 text-center">
         <motion.h3
@@ -200,6 +216,7 @@ export default function MinorMineralSurvey() {
         >
           Partner with Rajasthan’s Trusted Drone Survey Experts
         </motion.h3>
+
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -210,6 +227,7 @@ export default function MinorMineralSurvey() {
           From permissions to execution, Viman Survey ensures 100% compliance and precision
           in every mining survey project.
         </motion.p>
+
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}

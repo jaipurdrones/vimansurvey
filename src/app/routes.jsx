@@ -7,35 +7,34 @@ import ScrollToTop from "../shared/components/ScrollToTop";
 import FloatingButtons from "../shared/components/FloatingButton";
 
 // Home / Pages
-import Home from "../features/home/Home";
 import About from "../features/home/About";
 import Blog from "../features/home/Blog";
-
+import Home from "../features/home/Home";
 
 // Contact
 import Contact from "../features/contact/Contact";
 
-// Applications (Services)
-import MinorMineralSurvey from "../features/services/minorMineralSurvey";
-import MiningSurvey from "../features/services/miningsurvey";
-import ConstructionSurvey from "../features/services/construction";
+// Applications (Services) - ✅ kebab-case FILES + sorted
 import AgricultureSurvey from "../features/services/agriculture";
-import SolarSurvey from "../features/services/solar";
-import PowerlineMonitoring from "../features/services/powerline";
 import BridgeRoadInspection from "../features/services/bridge-road";
+import ConstructionSurvey from "../features/services/construction";
+import DisasterManagement from "../features/services/disaster-management";
+import DroneMagneticSurvey from "../features/services/drone-magnetic-survey";
 import ForestWildlifeSurvey from "../features/services/forest-wildlife";
-import DisasterManagement from "../features/services/disasterManagement";
-import RailwaySurvey from "../features/services/railwaySurvey";
-import IndustrialInspection from "../features/services/industrialInspection";
-import SmartCitySurvey from "../features/services/smartcitySurvey";
-import PipelineInspection from "../features/services/pipelineInspection";
-import RiverMappingAndServices from "../features/services/riverMappingService";
-import LidarSurvey from "../features/services/lidarSurvey";
-import DroneMagneticSurvey from "../features/services/droneMagneticSurvey";
+import IndustrialInspection from "../features/services/industrial-inspection";
+import LidarSurvey from "../features/services/lidar-survey";
+import MiningSurvey from "../features/services/mining-survey";
+import MinorMineralSurvey from "../features/services/minor-mineral-survey";
+import PipelineInspection from "../features/services/pipeline-inspection";
+import PowerlineMonitoring from "../features/services/powerline-monitoring";
+import RailwaySurvey from "../features/services/railway-survey";
+import RiverMappingAndServices from "../features/services/river-mapping-service";
+import SmartCitySurvey from "../features/services/smart-city-survey";
+import SolarSurvey from "../features/services/solar";
 
 // Solutions
-import DroneDataProcessing from "../features/services/Solutions/drone-insight-system";
-import PilotsOnProject from "../features/services/Solutions/pilot";
+import DroneDataProcessing from "../features/services/solutions/drone-insight-system";
+import PilotsOnProject from "../features/services/solutions/pilots-on-project";
 
 export default function App() {
   return (
@@ -54,26 +53,26 @@ export default function App() {
           <Route path="/contact" element={<Contact />} />
 
           {/* Applications */}
-          <Route path="/applications/minorMineralSurvey" element={<MinorMineralSurvey />} />
-          <Route path="/applications/miningsurvey" element={<MiningSurvey />} />
-          <Route path="/applications/construction" element={<ConstructionSurvey />} />
-          <Route path="/applications/agriculture" element={<AgricultureSurvey />} />
-          <Route path="/applications/solar" element={<SolarSurvey />} />
-          <Route path="/applications/powerline" element={<PowerlineMonitoring />} />
-          <Route path="/applications/bridge-road" element={<BridgeRoadInspection />} />
-          <Route path="/applications/forest-wildlife" element={<ForestWildlifeSurvey />} />
-          <Route path="/applications/disasterManagement" element={<DisasterManagement />} />
-          <Route path="/applications/railwaySurvey" element={<RailwaySurvey />} />
-          <Route path="/applications/industrialInspection" element={<IndustrialInspection />} />
-          <Route path="/applications/smartcitySurvey" element={<SmartCitySurvey />} />
-          <Route path="/applications/pipelineInspection" element={<PipelineInspection />} />
-          <Route path="/applications/riverMappingService" element={<RiverMappingAndServices />} />
-          <Route path="/applications/lidarSurvey" element={<LidarSurvey />} />
-          <Route path="/applications/droneMagneticSurvey" element={<DroneMagneticSurvey />} />
+          <Route path="/applications/agriculture-survey" element={<AgricultureSurvey />} />
+          <Route path="/applications/bridge-road-inspection" element={<BridgeRoadInspection />} />
+          <Route path="/applications/construction-survey" element={<ConstructionSurvey />} />
+          <Route path="/applications/disaster-management" element={<DisasterManagement />} />
+          <Route path="/applications/drone-magnetic-survey" element={<DroneMagneticSurvey />} />
+          <Route path="/applications/forest-wildlife-survey" element={<ForestWildlifeSurvey />} />
+          <Route path="/applications/industrial-inspection" element={<IndustrialInspection />} />
+          <Route path="/applications/lidar-survey" element={<LidarSurvey />} />
+          <Route path="/applications/mining-survey" element={<MiningSurvey />} />
+          <Route path="/applications/minor-mineral-survey" element={<MinorMineralSurvey />} />
+          <Route path="/applications/pipeline-inspection" element={<PipelineInspection />} />
+          <Route path="/applications/powerline-monitoring" element={<PowerlineMonitoring />} />
+          <Route path="/applications/railway-survey" element={<RailwaySurvey />} />
+          <Route path="/applications/river-mapping-service" element={<RiverMappingAndServices />} />
+          <Route path="/applications/smart-city-survey" element={<SmartCitySurvey />} />
+          <Route path="/applications/solar-survey" element={<SolarSurvey />} />
 
           {/* Solutions */}
           <Route path="/solutions/drone-insight-system" element={<DroneDataProcessing />} />
-          <Route path="/solutions/pilot" element={<PilotsOnProject />} />
+          <Route path="/solutions/pilots-on-project" element={<PilotsOnProject />} />
         </Routes>
       </main>
 

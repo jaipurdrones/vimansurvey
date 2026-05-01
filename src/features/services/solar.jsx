@@ -1,20 +1,19 @@
-import React, { useState } from "react";
+import React from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+import FAQ from "../../shared/components/FAQ";
+
 import {
   FaSolarPanel,
-  FaRegChartBar,
-  FaChevronDown,
   FaTools,
 } from "react-icons/fa";
+
 import solarHero from "../../assets/Solar/solar1.webp";
 import solar2 from "../../assets/Solar/solar2.webp";
 import solar3 from "../../assets/Solar/solar3.webp";
 import solar4 from "../../assets/Solar/solar4.webp";
 
 export default function SolarSurvey() {
-  const [openIndex, setOpenIndex] = useState(null);
-
   const faqs = [
     {
       q: "What type of data can drones collect for solar surveys?",
@@ -38,6 +37,10 @@ export default function SolarSurvey() {
     },
   ];
 
+  // reusable image style (5:3 ratio)
+  const imgClass =
+    "w-full aspect-[5/3] object-cover rounded-2xl shadow-lg";
+
   return (
     <main className="bg-white text-gray-800">
       <Helmet>
@@ -48,9 +51,8 @@ export default function SolarSurvey() {
         />
       </Helmet>
 
-      {/* HERO */}
-      <section className="relative flex items-center justify-center text-center text-white overflow-hidden
-                   min-h-[55svh] sm:min-h-[65svh] md:min-h-[85svh] lg:min-h-[92svh] xl:min-h-[95svh]">
+      {/* HERO (UNCHANGED) */}
+      <section className="relative flex items-center justify-center text-center text-white overflow-hidden min-h-[55svh] sm:min-h-[65svh] md:min-h-[85svh] lg:min-h-[92svh] xl:min-h-[95svh]">
         <img
           src={solarHero}
           alt="Solar Survey"
@@ -68,7 +70,7 @@ export default function SolarSurvey() {
         </div>
       </section>
 
-      {/* TRANSFORMING SECTION (slider removed) */}
+      {/* SECTION 1 (LEFT TEXT / RIGHT IMAGE) */}
       <section className="max-w-6xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-10 items-center">
         <div>
           <h2 className="text-3xl font-semibold text-primary-700 mb-4">
@@ -82,22 +84,21 @@ export default function SolarSurvey() {
           </p>
         </div>
 
-        {/* Static Image */}
-        <div className="flex justify-center">
-          <img
-            src={solar2}
-            alt="Solar Survey"
-            className="rounded-2xl shadow-xl w-full max-h-[420px] object-cover"
-          />
+        <div>
+          <img src={solar2} alt="Solar Survey" className={imgClass} />
         </div>
       </section>
 
-      {/* SOLAR PANEL INSPECTION */}
-      <section className="bg-gray-50 py-12 sm:py-16">
+      {/* SECTION 2 (RIGHT TEXT / LEFT IMAGE) */}
+      <section className="bg-gray-50 py-16">
         <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
-          <div>
+          <div className="order-2 md:order-1">
+            <img src={solar3} alt="Solar Panel Inspection" className={imgClass} />
+          </div>
+
+          <div className="order-1 md:order-2">
             <h3 className="text-2xl font-semibold text-primary-700 mb-4 flex items-center gap-3">
-              <FaSolarPanel className="text-primary-700" /> Solar Panel Inspection
+              <FaSolarPanel /> Solar Panel Inspection
             </h3>
             <ul className="list-disc pl-6 text-gray-700 space-y-2">
               <li>Inspect panels for mechanical or electrical faults using thermal and visual imagery.</li>
@@ -106,30 +107,15 @@ export default function SolarSurvey() {
               <li>Share real-time inspection data with your team for faster decision-making.</li>
             </ul>
           </div>
-
-          <div className="flex justify-center">
-            <img
-              src={solar3}
-              alt="Solar Panel Inspection"
-              className="rounded-2xl shadow-lg object-cover max-h-[360px] w-full"
-            />
-          </div>
         </div>
       </section>
 
-      {/* SOLAR SITE CONSTRUCTION */}
-      <section className="py-12 sm:py-16">
+      {/* SECTION 3 (LEFT TEXT / RIGHT IMAGE) */}
+      <section className="py-16">
         <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
-          <div className="order-2 md:order-1">
-            <img
-              src={solar4}
-              alt="Solar Site Construction"
-              className="rounded-2xl shadow-lg object-cover max-h-[360px] w-full"
-            />
-          </div>
-          <div className="order-1 md:order-2">
+          <div>
             <h3 className="text-2xl font-semibold text-primary-700 mb-4 flex items-center gap-3">
-              <FaTools className="text-primary-700" /> Solar Site Construction
+              <FaTools /> Solar Site Construction
             </h3>
             <ul className="list-disc pl-6 text-gray-700 space-y-2">
               <li>Generate survey-grade topographic data and digital terrain models.</li>
@@ -138,11 +124,15 @@ export default function SolarSurvey() {
               <li>Reduce bidding timelines and errors using precise aerial maps.</li>
             </ul>
           </div>
+
+          <div>
+            <img src={solar4} alt="Solar Site Construction" className={imgClass} />
+          </div>
         </div>
       </section>
 
-      {/* ABOUT COMPANY */}
-      <section className="bg-gray-50 py-12 sm:py-16">
+      {/* ABOUT */}
+      <section className="bg-gray-50 py-16">
         <div className="max-w-6xl mx-auto px-6">
           <h3 className="text-2xl font-semibold text-primary-700 mb-4">
             Viman Survey: India’s Best Drone Survey Company in Solar Industry
@@ -155,17 +145,13 @@ export default function SolarSurvey() {
           </p>
         </div>
       </section>
-      
-      {/* BENEFITS SECTION */}
+
+      {/* BENEFITS */}
       <section className="bg-primary-700 text-white py-20">
         <div className="max-w-6xl mx-auto px-6 text-center">
           <h3 className="text-3xl font-semibold mb-6">
             Benefits of Drone Surveys for Solar Projects
           </h3>
-          <p className="text-gray-200 mb-10 max-w-3xl mx-auto">
-            Our drone-powered inspections provide accurate data and deep insights
-            to enhance performance, safety, and profitability for solar operations.
-          </p>
 
           <div className="grid md:grid-cols-3 gap-8 text-left">
             {[
@@ -182,58 +168,21 @@ export default function SolarSurvey() {
                 desc: "Reduce manual inspection efforts and downtime with faster, automated aerial inspections.",
               },
             ].map((b, i) => (
-              <div
-                key={i}
-                className="p-6 bg-white/10 rounded-lg border border-white/20 hover:bg-white/20 transition"
-              >
-                <h4 className="text-xl font-semibold text-white mb-3">{b.title}</h4>
-                <p className="text-white/90 text-sm leading-relaxed">{b.desc}</p>
+              <div key={i} className="p-6 bg-white/10 rounded-lg border border-white/20">
+                <h4 className="text-xl font-semibold mb-3">{b.title}</h4>
+                <p className="text-sm">{b.desc}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-
-      {/* FAQ SECTION */}
-      <section className="max-w-6xl mx-auto px-6 py-12 sm:py-16">
-        <h3 className="text-3xl font-semibold text-center text-primary-700 mb-8">
-          Frequently Asked Questions
-        </h3>
-
-        <div className="space-y-3">
-          {faqs.map((f, idx) => {
-            const isOpen = openIndex === idx;
-            return (
-              <div key={idx} className="border border-gray-200 rounded-lg overflow-hidden">
-                <button
-                  onClick={() => setOpenIndex(isOpen ? null : idx)}
-                  className="w-full flex items-center justify-between px-4 py-3 text-left bg-white hover:bg-gray-50 transition"
-                >
-                  <div className="flex items-center gap-3">
-                    <FaRegChartBar className="text-primary-600" />
-                    <span className="font-medium text-gray-800">{f.q}</span>
-                  </div>
-                  <FaChevronDown
-                    className={`transition-transform duration-300 ${isOpen ? "rotate-180" : "rotate-0"
-                      }`}
-                  />
-                </button>
-
-                {isOpen && (
-                  <div className="px-4 pb-4 bg-white text-gray-700">
-                    <p className="pt-2 leading-relaxed">{f.a}</p>
-                  </div>
-                )}
-              </div>
-            );
-          })}
-        </div>
-      </section>
+      {/* FAQ IMPORT COMPONENT */}
+      <FAQ faqs={faqs} />
 
       {/* CTA */}
-      <section className="bg-primary-700 text-white py-16">
-        <div className="max-w-6xl mx-auto px-6 text-center">
+      <section className="bg-primary-700 text-white py-16 text-center">
+        <div className="max-w-6xl mx-auto px-6">
           <h3 className="text-3xl font-semibold mb-4">
             Power Your Solar Projects with Viman Survey
           </h3>
@@ -242,7 +191,7 @@ export default function SolarSurvey() {
           </p>
           <Link
             to="/contact"
-            className="inline-block bg-white text-primary-700 px-8 py-3 rounded-full font-medium hover:bg-gray-100 transition"
+            className="inline-block bg-white text-primary-700 px-8 py-3 rounded-full"
           >
             Get in Touch
           </Link>
