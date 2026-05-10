@@ -5,7 +5,7 @@ export default function Contact() {
   return (
     <section className="max-w-6xl mx-auto px-6 py-16">
       <div className="grid lg:grid-cols-2 gap-10 items-start">
-        
+
         {/* Left Content */}
         <div className="space-y-6">
           <div>
@@ -54,9 +54,10 @@ export default function Contact() {
               </p>
             </div>
 
+            {/* Correct Business Location Embed */}
             <iframe
-              title="Google Map"
-              src="https://www.google.com/maps?q=26.9124,75.7873&z=15&output=embed"
+              title="Viman Survey Location"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.133188472111!2d75.720327!3d26.867509199999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db54242c1fe3b%3A0xf430b2d302e5e220!2sViman%20Survey%20-%20Drone%20Survey%20%26%20Mapping%20Experts%20Jaipur!5e0!3m2!1sen!2sin!4v1778413017317!5m2!1sen!2sin"
               width="100%"
               height="320"
               style={{ border: 0 }}

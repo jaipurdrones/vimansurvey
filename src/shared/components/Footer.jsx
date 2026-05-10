@@ -54,8 +54,7 @@ export default function Footer() {
           {/* Social Icons */}
           <div className="flex flex-wrap gap-3 pt-2">
             <SocialIcon Icon={FaInstagram} link="https://instagram.com/vimansurvey" />
-            <SocialIcon Icon={FaTwitter} link="https://twitter.com/vimansurvey" />
-            <SocialIcon Icon={FaLinkedinIn} link="https://linkedin.com/company/vimansurvey" />
+            <SocialIcon Icon={FaLinkedinIn} link="https://www.linkedin.com/in/ashish-kumar-447853160?utm_source=share_via&utm_content=profile&utm_medium=member_ios" />
             <SocialIcon Icon={FaWhatsapp} link="https://wa.me/917976430650" />
             <SocialIcon Icon={FaYoutube} link="https://youtube.com/@vimansurvey" />
           </div>
