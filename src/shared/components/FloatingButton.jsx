@@ -17,7 +17,7 @@ export default function FloatingButtons() {
 
       {/* 💬 WhatsApp Button */}
       <a
-        href="https://wa.me/9352230994"
+        href="https://wa.me/+917976430650"
         target="_blank"
         rel="noopener noreferrer"
         className="flex items-center gap-2 bg-[#25D366] text-white py-2 px-4 rounded-full shadow-lg 

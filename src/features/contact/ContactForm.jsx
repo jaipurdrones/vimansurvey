@@ -19,7 +19,7 @@ Email: ${form.email}
 Phone: ${form.phone}
 Message: ${form.message}`;
 
-    const phoneNumber = "919352230994"; // 🔴 replace this
+    const phoneNumber = "917976430650"; // 🔴 replace this
 
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(url, "_blank");
