@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
 // ✅ Assets (keep outside component)
 import hero1 from "../../assets/Home/home1.webp";
@@ -33,18 +33,24 @@ export default function Hero({
 
       {/* Background Slider */}
       <div className="absolute inset-0">
-        <AnimatePresence mode="wait">
+        {images.map((img, i) => (
           <motion.img
-            key={current}
-            src={images[current]}
+            key={i}
+            src={img}
             alt="Drone Survey"
-            initial={{ opacity: 0, scale: 1.08 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 1.2, ease: "easeInOut" }}
+            initial={false}
+            animate={{
+              opacity: i === current ? 1 : 0,
+              scale: i === current ? 1 : 1.05,
+            }}
+            transition={{
+              opacity: { duration: 1.2, ease: "easeInOut" },
+              scale: { duration: 6, ease: "linear" },
+            }}
+            style={{ willChange: "opacity, transform" }}
             className="absolute inset-0 w-full h-full object-cover"
           />
-        </AnimatePresence>
+        ))}
 
         {/* ✅ Improved Overlay (gradient for better readability) */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/70" />
