@@ -63,7 +63,7 @@ export default function Navbar() {
         { name: "Pilots On Project", to: "/solutions/pilots-on-project" },
       ],
     },
-    { name: "Blog", to: "/blog" },
+    /*{ name: "Blog", to: "/blog" },*/
     { name: "Contact Us", to: "/contact", isButton: true },
   ];
 
