@@ -6,7 +6,7 @@ export default function FloatingButtons() {
     <div className="fixed bottom-5 right-5 flex flex-col items-end gap-3 z-[1000]">
       {/* 📞 Call Button */}
       <a
-        href="tel:+919352230994"
+        href="tel:+917976430650"
         className="flex items-center gap-2 bg-primary-600 text-white py-2 px-4 rounded-full shadow-lg 
                    hover:bg-primary-700 hover:scale-105 transition-all duration-300 group"
         aria-label="Call Us"
